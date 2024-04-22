@@ -98,6 +98,11 @@ ul {
      display: flex;
 }
 
+.nav_icon {
+    font-size: 1.5rem;
+}
+
+
 
 @media screen and (max-width: 767px) {
     .nav_menu {
@@ -136,8 +141,8 @@ ul {
     padding: 0;
 }
 
-.nav_name {
-    font-size: var(--tiny-font-size);
+.nav_link {
+    font-size: var(--normal-font-size);
 
 }
 
@@ -210,8 +215,6 @@ ul {
 
 
 }
-
-
 
 
 
