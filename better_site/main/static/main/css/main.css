@@ -243,10 +243,9 @@ nav {
         justify-self: start;
      }
 
-
-
-
-
+    .best_article p {
+        font-size: 0.8rem;
+    }
 
 }
 
@@ -268,10 +267,8 @@ nav {
         justify-self: center;
      }
 
-
-
-
 }
+
 @media screen and (max-width: 767px) {
 
 
@@ -291,8 +288,8 @@ nav {
     }
 
     .best_article {
-        max-width: 60vw;
-        min-height: 60vw;
+        max-width: 80vw;
+        min-height: 80vw;
         justify-self: center;
      }
 
@@ -333,13 +330,6 @@ nav {
         transition: .2s;
     }
 
-    .best_article {
-        max-width: 50vw;
-        max-height: 50vw;
-        margin-top:
-        justify-self: center;
-     }
-
 
 
 }
@@ -349,13 +339,17 @@ nav {
 
     .best_articles {
         min-height: 100vh;
-        margin-top: 12vh;
+        margin-top: 8vh;
         padding-bottom: 150px;
      }
 
      .best_article {
-        max-width: 60vw;
-        min-height: 60vw;
+        max-width: 70vw;
+        min-height: 70vw;
+    }
+
+    .best_article p {
+
     }
 
 }
