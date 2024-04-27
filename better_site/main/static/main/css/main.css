@@ -186,7 +186,6 @@ nav {
     background-color: orange;
     text-align: left;
     border-radius: 30px;
-
     position: relative;
 
 }
@@ -216,7 +215,8 @@ nav {
     padding-bottom: 7%;
     font-size: 1.5rem;
     min-width: 50%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
     border-radius: 30px;
     transition: .4s;
 
@@ -234,7 +234,7 @@ nav {
     opacity: 1;
     height: auto;
     width: auto;
-    display: inline;
+   display: inline;
 
 }
 
