@@ -135,6 +135,11 @@ nav {
     font-weight: 600;
     text-decoration: none;
     font-size: var(--normal-font-size);
+
+    opacity: .3;
+    filter: blur(.4px);
+
+
 }
 
 .nav_list  {
@@ -150,38 +155,8 @@ nav {
 
 
 .active {
-    color: rgba(0, 0, 0, 0.7);
-
-    text-shadow:
-      1px 1px var(--blur-radius) var(--shadow-color-darker),
-      2px 2px var(--blur-radius) var(--shadow-color-darker),
-      4px 3px var(--blur-radius) var(--shadow-color-darker),
-      6px 4px var(--blur-radius) var(--shadow-color-darker),
-      8px 5px var(--blur-radius) var(--shadow-color-darker),
-      10px 6px var(--blur-radius) var(--shadow-color-darker),
-      12px 7px var(--blur-radius) var(--shadow-color-darker),
-      14px 8px var(--blur-radius) var(--shadow-color-darker),
-      16px 9px var(--blur-radius) var(--shadow-color-darker),
-      18px 10px var(--blur-radius) var(--shadow-color-darker),
-      20px 11px var(--blur-radius) var(--shadow-color-medium),
-      22px 12px var(--blur-radius) var(--shadow-color-medium),
-      24px 13px var(--blur-radius) var(--shadow-color-medium),
-      26px 14px var(--blur-radius) var(--shadow-color-medium),
-      28px 15px var(--blur-radius) var(--shadow-color-medium),
-      30px 16px var(--blur-radius) var(--shadow-color-medium),
-      32px 17px var(--blur-radius) var(--shadow-color-medium),
-      34px 18px var(--blur-radius) var(--shadow-color-medium),
-      36px 19px var(--blur-radius) var(--shadow-color),
-      38px 20px var(--blur-radius) var(--shadow-color),
-      40px 21px var(--blur-radius) var(--shadow-color),
-      42px 22px var(--blur-radius) var(--shadow-color),
-      44px 23px 10px var(--shadow-color),
-      46px 24px 10px var(--shadow-color),
-      48px 25px 10px var(--shadow-color),
-      50px 26px 10px var(--shadow-color),
-      52px 27px 10px var(--shadow-color),
-      54px 28px 10px var(--shadow-color),
-      56px 29px 10px var(--shadow-color);
+    color: black;
+    opacity: 1;
     transition: .3s;
 
 }
@@ -258,7 +233,7 @@ nav {
 
 
 .relevant {
-    font-size: 4rem;
+    font-size: 2.8rem;
     z-index: 2000;
     position: absolute;
     min-width: 100%;
