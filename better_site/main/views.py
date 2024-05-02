@@ -1,4 +1,7 @@
 from django.shortcuts import render
-
+from .models import Articles
 def home(request):
-    return render(request, 'main/home.html')
+    context = {
+        'articles': Articles.objects.all(),
+    }
+    return render(request, 'main/home.html', context)

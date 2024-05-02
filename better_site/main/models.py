@@ -8,3 +8,6 @@ class Articles(models.Model):
     time_update = models.DateTimeField(auto_now=True)
     likes_amount = models.IntegerField()
     comments_amount = models.IntegerField()
+
+    def __str__(self):
+        return self.title

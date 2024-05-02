@@ -40,40 +40,15 @@
 
             <i class="fa-solid fa-circle-chevron-left arrow" id="arrow_backward"></i>
             <ul class="rec_list">
-                <li class="article_rec">
-                    <div class="article">
-                        <p class="name_article">1Как снять деньги с кредитной карты без последствий</p>
-                    </div>
-                </li>
+
+                {% for post in articles %}
 
                 <li class="article_rec">
                     <div class="article">
-                        <p class="name_article">2Как снять деньги с кредитной карты без последствий</p>
+                        <p class="name_article">{{post.title}}</p>
                     </div>
                 </li>
-
-                <li class="article_rec">
-                    <div class="article">
-                        <p class="name_article">3Как снять деньги с кредитной карты без последствий</p>
-                    </div>
-                </li>
-
-                <li class="article_rec">
-                    <div class="article">
-                        <p class="name_article">4Как снять деньги с кредитной карты без последствий</p>
-                    </div>
-                </li>
-
-                <li class="article_rec">
-                    <div class="article">
-                        <p class="name_article">5Как снять деньги с кредитной карты без последствий</p>
-                    </div>
-                </li>
-                <li class="article_rec">
-                    <div class="article">
-                        <p class="name_article">6Как снять деньги с кредитной карты без последствий</p>
-                    </div>
-                </li>
+                {% endfor %}
 
             </ul>
             <i class="fa-solid fa-circle-chevron-right arrow"  id="arrow_forward"></i>

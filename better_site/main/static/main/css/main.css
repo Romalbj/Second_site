@@ -297,13 +297,14 @@ nav {
     background-color: black;
     margin: 0;
     padding: 0;
-    margin-top: 10vh;
+    margin-top: 15vh;
     padding-top: 5vh;
     padding-bottom: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+
 }
 
 .list_articles {
@@ -319,18 +320,27 @@ nav {
     cursor: pointer;
     color: white;
     padding: 0 1%;
+    transition: .3s;
+    opacity: 0.6;
 }
-
+.arrow:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
 
 .list_articles ul {
     display: grid;
     margin: 0;
-    padding: 0;
+    padding: 3%;
     grid-template-columns: repeat(auto-fit, 3);
     gap: 3%;
     grid-auto-flow: column;
     width: 100vw;
     overflow-x: scroll;
+    z-index: 10000;
+
+/*        box-shadow: inset 20px 0px 20px #f8a100,
+                    inset -20px 0px 20px #f8a100;*/
 }
 
 .list_articles ul::-webkit-scrollbar {
@@ -346,6 +356,7 @@ nav {
     margin: 0;
     padding: 0;
     position: relative;
+    z-index: 1;
 }
 
 .article {
@@ -361,6 +372,11 @@ nav {
     background-size: cover;
     background-position: center center;
     border-radius: 20px;
+    transition: .3s;
+}
+
+.article:hover{
+    transform: scale(1.1);
 }
 
 .article p {
