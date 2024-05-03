@@ -3,8 +3,8 @@
     --hue: 174;
     --sat: 63%;
 
-    --first-color: hsl(var(--hue), vat(--sat), 40%);
-    --first-color-alt: hsl(var(--hue), vat(--sat), 36%);
+    --first-color: hsl(var(--hue), var(--sat), 40%);
+    --first-color-alt: hsl(var(--hue), var(--sat), 36%);
     --title-color: hsl(var(--hue), 12%, 15%);
     --text-color: hsl(var(--hue), 8%, 35%);
     --body-color: hsl(var(--hue), 100%, 99%);
@@ -235,7 +235,7 @@ nav {
 
 .relevant {
     font-size: 2.8rem;
-    z-index: 2000;
+
     position: absolute;
     min-width: 100%;
     top: 5%;
@@ -337,7 +337,7 @@ nav {
     grid-auto-flow: column;
     width: 100vw;
     overflow-x: scroll;
-    z-index: 10000;
+
 
 /*        box-shadow: inset 20px 0px 20px #f8a100,
                     inset -20px 0px 20px #f8a100;*/
@@ -387,6 +387,55 @@ nav {
     padding: 5%;
     margin: 2% 0;
 }
+
+.info {
+    margin: 0;
+    padding: 10% ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+}
+
+.info  span {
+    color: rgba(255, 255, 255, 0.5);
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-image: linear-gradient(90deg, white, white);
+    animation: info linear forwards;
+    animation-timeline: view();
+}
+
+@keyframes info {
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+.info h2  {
+    font-size: 3rem;
+}
+
+
+.info p  {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.info h2 span {
+    animation-range-start: cover 10vh;
+    animation-range-end: cover 50vh;
+}
+
+.info p span {
+    animation-range-start: cover 42.5vh;
+    animation-range-end: cover 75vh;
+}
+
+
+
 
 
 
@@ -494,9 +543,6 @@ nav {
 
 @media screen and (min-width: 767px) {
 
-    .nav {
-        height: calc(var(--header-height) + 1.5rem);
-    }
 
     .nav_name {
         font-size: var(--normal-font-size);
