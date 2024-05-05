@@ -438,7 +438,6 @@ nav {
 .container {
     padding: 0;
     margin: 0;
-    background-color: #8dce8f;
     min-width: 100vw;
     height: 90vh;
     display: flex;
@@ -451,21 +450,21 @@ nav {
 .scroll_text {
     min-width: 100vw;
     height: 100%;
-    padding: 0;
+    padding-top: 5%;
     margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-around;
     flex-direction: row;
-    gap: 3rem;
+    gap: 6rem;
     white-space: nowrap;
-    animation: scroll_text 10.2s infinite linear;
+    animation: scroll_text 12s infinite linear;
 }
 
 .scroll_text ul {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 6rem;
     padding: 0;
     margin: 0;
 }
@@ -478,7 +477,8 @@ nav {
 }*/
 
 .scroll_text p {
-    font-size: 4rem;
+    font-size: 6rem;
+    color: rgba(0,0,0, 0.5);
     padding: 0;
     letter-spacing: 2px;
     margin: 0;
@@ -489,7 +489,7 @@ nav {
         transform: translateX(0%);
     }
     to {
-     transform: translateX(calc(-100% - 9rem));
+     transform: translateX(calc(-100% - 8rem));
     }
 }
 
