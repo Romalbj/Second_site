@@ -191,7 +191,6 @@ nav {
     flex-direction: column-reverse;
     max-width: 100%;
     min-height: 70vh;
-    background-color: orange;
     text-align: left;
     border-radius: 30px;
     position: relative;
@@ -313,6 +312,7 @@ nav {
     align-items: center;
     width: 100vw;
     padding: 0;
+
 }
 
 .arrow {
@@ -337,10 +337,6 @@ nav {
     grid-auto-flow: column;
     width: 100vw;
     overflow-x: scroll;
-
-
-/*        box-shadow: inset 20px 0px 20px #f8a100,
-                    inset -20px 0px 20px #f8a100;*/
 }
 
 .list_articles ul::-webkit-scrollbar {
@@ -380,7 +376,6 @@ nav {
 }
 
 .article p {
-    background-color: red;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(17px);
@@ -390,7 +385,8 @@ nav {
 
 .info {
     margin: 0;
-    padding: 10% ;
+    padding-left: 10%;
+    padding: 2% 10% 10% 10%;
     display: flex;
     align-items: center;
     justify-content: center;
