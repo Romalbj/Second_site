@@ -457,17 +457,31 @@ nav {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 2rem;
+    gap: 3rem;
     white-space: nowrap;
-    animation: scroll_text 10s infinite linear;
+    animation: scroll_text 10.2s infinite linear;
 }
 
+.scroll_text ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+/*.scroll_text ul:first-child{
+    background-color: red;
+}
+.scroll_text ul:last-child{
+    background-color: greenyellow;
+}*/
 
 .scroll_text p {
     font-size: 4rem;
     padding: 0;
+    letter-spacing: 2px;
     margin: 0;
-    /*transform: rotate(90deg);*/
 }
 
 @keyframes scroll_text {
@@ -475,7 +489,7 @@ nav {
         transform: translateX(0%);
     }
     to {
-     transform: translateX(-200%);
+     transform: translateX(calc(-100% - 9rem));
     }
 }
 
