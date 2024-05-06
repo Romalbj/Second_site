@@ -609,6 +609,17 @@ nav {
      }
 }
 
+@media screen and (max-width: 570px) {
+        .info h2  {
+        font-size: 2.2rem;
+    }
+
+    .info p  {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+}
+
 /* for small devices */
 @media screen and (max-width: 400px) {
     .nav_name {
