@@ -61,7 +61,7 @@ main {
     align-items: center;
     flex-direction: column;
 /*    overflow-y: scroll;*/
-    overflow-x: hidden;
+/*    overflow-x: hidden;*/
     z-index: 1;
 }
 
@@ -492,7 +492,6 @@ nav {
     min-width: 100vw;
     padding: 0;
     padding-bottom: 5%;
-    background-color: #ee507c;
     margin: 0;
     min-height: 70vh;
     display: flex;
@@ -506,7 +505,6 @@ nav {
     height: auto;
     width: 100vw;
     display: grid;
-    background-color: greenyellow;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 5%;
 
@@ -515,13 +513,13 @@ nav {
 .credit ul li {
     border: 1px solid black;
     height: 25vh;
+    padding: 0 2% 2% 2%;
+    margin: 0;
     width: 45vh;
     justify-self: center;
     display: flex;
     align-items: end;
     justify-content: center;
-    margin: 0;
-    padding: 0 2%;
     background-image: url(../img/best_article_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -532,11 +530,10 @@ nav {
 
 .credit p {
     margin: 0;
-    margin-top: 1vh;
-    padding-right: 0;
-    padding-top: 7%;
-    padding-bottom: 7%;
+    padding: 3% 7% 5% 7%;
+
     font-size: 1rem;
+    text-align: left;
     min-width: 50%;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(17px);
