@@ -77,25 +77,39 @@
     </div>
 
     <div class="container">
-            <div class="scroll_text">
-                <ul>
-                    <li>
-                       <p>Кредитные карты</p>
-                    </li>
-                    <li>
-                       <p>Кредитные карты</p>
-                    </li>
+        <div class="scroll_text">
+            <ul>
+                <li>
+                    <p>Кредитные карты</p>
+                </li>
+                <li>
+                    <p>Кредитные карты</p>
+                </li>
+            </ul>
 
-                </ul>
+            <ul aria-hidden="true">
+                <li>
+                    <p>Кредитные карты</p>
+                </li>
+                <li>
+                    <p>Кредитные карты</p>
+                </li>
+       </div>
+    </div>
 
-                <ul aria-hidden="true">
-                    <li>
-                       <p>Кредитные карты</p>
-                    </li>
-                    <li>
-                       <p>Кредитные карты</p>
-                    </li>
-            </div>
+    <div class="credit">
+        <ul>
+            <li class="credit_stat">
+                <p>На нашем сайте больше 100 статей про кредитные карты и кредиты</p>
+            </li>
+            {% for post in articles %}
+            <li class="credit_article">
+                <div>
+                    <p>{{post.title}}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
 
     <div class="shit">

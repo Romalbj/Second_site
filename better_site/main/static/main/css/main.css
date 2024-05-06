@@ -60,8 +60,8 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-/*    overflow-y: scroll;
-    overflow-x: hidden;  */
+/*    overflow-y: scroll;*/
+    overflow-x: hidden;
     z-index: 1;
 }
 
@@ -303,7 +303,6 @@ nav {
     align-items: center;
     justify-content: center;
     width: 100%;
-
 }
 
 .list_articles {
@@ -311,8 +310,9 @@ nav {
     flex-direction: row;
     align-items: center;
     width: 100vw;
-    padding: 0;
-
+    height: 100%;
+    padding:  0;
+    margin: 0;
 }
 
 .arrow {
@@ -435,18 +435,16 @@ nav {
     padding: 0;
     margin: 0;
     min-width: 100vw;
-    height: 90vh;
+    height: 20vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
 
-
 .scroll_text {
     min-width: 100vw;
-    height: 100%;
-    padding-top: 5%;
+    padding: 0;
     margin: 0;
     display: flex;
     align-items: flex-start;
@@ -490,9 +488,64 @@ nav {
 }
 
 
+.credit {
+    min-width: 100vw;
+    padding: 0;
+    padding-bottom: 5%;
+    background-color: #ee507c;
+    margin: 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
 
+.credit ul {
+    padding: 0 2% 5% 2%;
+    margin: 0;
+    height: auto;
+    width: 100vw;
+    display: grid;
+    background-color: greenyellow;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5%;
 
+}
 
+.credit ul li {
+    border: 1px solid black;
+    height: 25vh;
+    width: 45vh;
+    justify-self: center;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    margin: 0;
+    padding: 0 2%;
+    background-image: url(../img/best_article_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.credit p {
+    margin: 0;
+    margin-top: 1vh;
+    padding-right: 0;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    font-size: 1rem;
+    min-width: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(17px);
+    border-radius: 20px;
+    transition: .4s;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+}
 
 
 
@@ -593,7 +646,6 @@ nav {
     .short_content {
         display: none;
      }
-
 }
 
 
@@ -655,9 +707,13 @@ nav {
         justify-self: center;
     }
 
+    .list_articles ul {
+        gap: 5%;
+    }
+
     .list_articles ul li {
-        width: 35vw;
-        height: 25vw;
+        width: 55vw;
+        height: 42vw;
     }
 
 }
