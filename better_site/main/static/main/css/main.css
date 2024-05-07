@@ -102,7 +102,7 @@ nav {
     font-size: 1.8rem;
     padding: 0;
     margin: 0;
-    padding-left: 2.8vw;
+    padding-left: 5vw;
     height: 100%;
     display: flex;
     align-items: center;
@@ -113,7 +113,7 @@ nav {
 
 .nav_menu {
     height: 100%;
-    padding-right: 2.8vw;
+    padding-right: 6vw;
 }
 
 
@@ -298,7 +298,7 @@ nav {
     padding: 0;
     margin-top: 15vh;
     padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-bottom: 3vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -309,7 +309,8 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100vw;
+    justify-content: center;
+    width: 96vw;
     height: 100%;
     padding:  0;
     margin: 0;
@@ -319,10 +320,15 @@ nav {
     font-size: 1.8rem;
     cursor: pointer;
     color: white;
-    padding: 0 1%;
+    padding: 0 0.7%;
     transition: .3s;
     opacity: 0.6;
 }
+
+#arrow_forward {
+    padding: 0 1%;
+}
+
 .arrow:hover {
     transform: scale(1.1);
     opacity: 1;
@@ -333,7 +339,7 @@ nav {
     margin: 0;
     padding: 3%;
     grid-template-columns: repeat(auto-fit, 3);
-    gap: 3%;
+    gap: 4.5%;
     grid-auto-flow: column;
     width: 100vw;
     overflow-x: scroll;
@@ -345,7 +351,7 @@ nav {
 
 .list_articles ul li {
     width: 30vw;
-    height: 20vw;
+    height: 17vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,7 +369,6 @@ nav {
     justify-content: center;
     margin: 0;
     padding: 0 2%;
-    background-image: url(../img/best_article_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -385,13 +390,18 @@ nav {
 
 .info {
     margin: 0;
-    padding-left: 10%;
-    padding: 2% 10% 10% 10%;
+    padding: 0 10% 6% 10%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: black;
+    width: 100vw;
+}
+
+.info h2, .info p {
+    width: 60vw;
+    text-align: center;
 }
 
 .info  span {
@@ -411,7 +421,7 @@ nav {
 }
 
 .info h2  {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 
@@ -452,7 +462,7 @@ nav {
     flex-direction: row;
     gap: 6rem;
     white-space: nowrap;
-    animation: scroll_text 12s infinite linear;
+    animation: scroll_text 50s infinite linear;
 }
 
 .scroll_text ul {
@@ -472,7 +482,7 @@ nav {
 
 .scroll_text p {
     font-size: 6rem;
-    color: rgba(0,0,0, 0.5);
+    color: rgba(0,0,0, 0.15);
     padding: 0;
     letter-spacing: 2px;
     margin: 0;
@@ -505,22 +515,22 @@ nav {
     height: auto;
     width: 100vw;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    column-gap: 1vw;
+    row-gap: 3vw;
 
 }
 
 .credit ul li {
-    border: 1px solid black;
-    height: 25vh;
     padding: 0 2% 2% 2%;
     margin: 0;
-    width: 45vh;
+    height: 28vh;
+    width: 48vh;
     justify-self: center;
     display: flex;
     align-items: end;
     justify-content: center;
-    background-image: url(../img/best_article_2.jpg);
+    background-image: url('../img/best_article_1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -531,8 +541,7 @@ nav {
 .credit p {
     margin: 0;
     padding: 3% 7% 5% 7%;
-
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: left;
     min-width: 50%;
     background-color: rgba(255, 255, 255, 0.5);

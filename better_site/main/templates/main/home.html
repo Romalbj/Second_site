@@ -44,8 +44,8 @@
                 {% for post in articles %}
 
                 <li class="article_rec">
-                    <div class="article">
-                        <p class="name_article">{{post.title}}</p>
+                    <div class="article" style="background-image: url('{{post.photo.url}}');">
+                        <p class="name_article" >{{post.title}}</p>
                     </div>
                 </li>
                 {% endfor %}
@@ -59,7 +59,7 @@
 
     <div class="info">
         <h2>
-            <span>Some info about us</span>
+            <span>SOME INFO ABOUT US</span>
         </h2>
 
         <p>
@@ -80,19 +80,19 @@
         <div class="scroll_text">
             <ul>
                 <li>
-                    <p>Кредитные карты</p>
+                    <p>Credit cards</p>
                 </li>
                 <li>
-                    <p>Кредитные карты</p>
+                    <p>Credit cards</p>
                 </li>
             </ul>
 
             <ul aria-hidden="true">
                 <li>
-                    <p>Кредитные карты</p>
+                    <p>Credit cards</p>
                 </li>
                 <li>
-                    <p>Кредитные карты</p>
+                    <p>Credit cards</p>
                 </li>
        </div>
     </div>
@@ -103,7 +103,7 @@
                 <p>На нашем сайте больше 100 статей про кредитные карты и кредиты</p>
             </li>
             {% for post in articles %}
-            <li class="credit_article">
+            <li class="credit_article" style="background-image: url('{{post.photo.url}}');">
                 <div>
                     <p>{{post.title}}</p>
                 </div>
