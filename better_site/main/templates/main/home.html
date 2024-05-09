@@ -118,6 +118,100 @@
         </ul>
     </div>
 
+
+    <div class="container black">
+        <div class="scroll_text scroll_text_black">
+            <ul>
+                <li>
+                    <p>Debit cards</p>
+                </li>
+                <li>
+                    <p>Debit cards</p>
+                </li>
+            </ul>
+
+            <ul aria-hidden="true">
+                <li>
+                    <p>Debit cards</p>
+                </li>
+                <li>
+                    <p>Debit cards</p>
+                </li>
+                <li>
+                    <p>Debit cards</p>
+                </li>
+                <li>
+                    <p>Debit cards</p>
+                </li>
+       </div>
+    </div>
+
+    <div class="credit credit_black black">
+        <ul>
+            <li class="credit_stat credit_stat_black">
+                <p>На нашем сайте больше 100 статей про кредитные карты и кредиты</p>
+            </li>
+            {% for post in articles %}
+            <li class="credit_article" style="background-image: url('{{post.photo.url}}');">
+                <div>
+                    <p>{{post.title}}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="scroll_text">
+            <ul>
+                <li>
+                    <p>Credit cards</p>
+                </li>
+                <li>
+                    <p>Credit cards</p>
+                </li>
+            </ul>
+
+            <ul aria-hidden="true">
+                <li>
+                    <p>Credit cards</p>
+                </li>
+                <li>
+                    <p>Credit cards</p>
+                </li>
+                <li>
+                    <p>Credit cards</p>
+                </li>
+                <li>
+                    <p>Credit cards</p>
+                </li>
+       </div>
+    </div>
+
+    <div class="credit">
+        <ul>
+            <li class="credit_stat">
+                <p>На нашем сайте больше 100 статей про кредитные карты и кредиты</p>
+            </li>
+            {% for post in articles %}
+            <li class="credit_article" style="background-image: url('{{post.photo.url}}');">
+                <div>
+                    <p>{{post.title}}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="counters">
+        <div>
+            <div class="counter">
+                <h1><span data-count="156">0</span></h1>
+                <h3>projects created</h3>
+            </div>
+        </div>
+    </div>
+
     <div class="shit">
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna

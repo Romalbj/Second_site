@@ -14,7 +14,7 @@ console.log("Ширина экрана: " + width + "px");
 console.log("Высота экрана: " + height + "px");
 
 
-
+//Horizontal sctoll text
 let scrollContainer = document.querySelector('.rec_list');
 let arrow_backward = document.getElementById('arrow_backward');
 let arrow_forward = document.getElementById('arrow_forward');
@@ -35,6 +35,48 @@ arrow_backward.addEventListener('click', () => {
     scrollContainer.style.scrollBehavior = 'smooth';
     scrollContainer.scrollLeft -= 500;
 });
+
+const creditStat = document.querySelectorAll('.counters span');
+const container = document.querySelectorAll('.counters');
+let activated = false;
+
+window.addEventListener('scroll', () => {
+    if(
+            pageYOffset > container.offsetTop - container.offsetHeight - 200
+            && activated === false
+    ) {
+        counters.forEach(counter => {
+            counter.innerText = 0;
+
+            let count = 0;
+
+            functionupdateCount()
+                const target = parseInt(counter.dataset.count);
+                if(count < target) {
+                    count++;
+                    counter.innerText = count;
+                    setTimeout(updateCount, 10);
+                } else {
+                    counter.innerText = target;
+                }
+
+
+            updateCount();
+            activated = true;
+        });
+    } else if(
+        pageYOffset < container.offsetTop - container.offsetHeight - 500
+        || pageYOffset === 0
+        && activated === true
+ ) {
+    counters.forEach(counter => {
+            counter.innerText= 0;
+    });
+        activated = false;
+    }
+});
+
+
 
 
 
