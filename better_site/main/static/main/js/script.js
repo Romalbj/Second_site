@@ -36,45 +36,26 @@ arrow_backward.addEventListener('click', () => {
     scrollContainer.scrollLeft -= 500;
 });
 
-const creditStat = document.querySelectorAll('.counters span');
-const container = document.querySelectorAll('.counters');
-let activated = false;
 
-window.addEventListener('scroll', () => {
-    if(
-            pageYOffset > container.offsetTop - container.offsetHeight - 200
-            && activated === false
-    ) {
-        counters.forEach(counter => {
-            counter.innerText = 0;
+let valueDisplays = document.querySelectorAll(".num");
+let interval = 5000;
 
-            let count = 0;
+console.log(valueDisplays);
 
-            functionupdateCount()
-                const target = parseInt(counter.dataset.count);
-                if(count < target) {
-                    count++;
-                    counter.innerText = count;
-                    setTimeout(updateCount, 10);
-                } else {
-                    counter.innerText = target;
-                }
-
-
-            updateCount();
-            activated = true;
-        });
-    } else if(
-        pageYOffset < container.offsetTop - container.offsetHeight - 500
-        || pageYOffset === 0
-        && activated === true
- ) {
-    counters.forEach(counter => {
-            counter.innerText= 0;
-    });
-        activated = false;
-    }
+valueDisplays.forEach((valueDisplay) => {
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+    console.log(endValue);
+    let duration = Math.floor(interval / endValue);
+    let counter = setInterval(function () {
+        startValue += 1;
+        valueDisplay.textContent = startValue;
+        if(startValue == endValue) {
+            clearInterval(counter);
+        }
+    }, duration);
 });
+
 
 
 
