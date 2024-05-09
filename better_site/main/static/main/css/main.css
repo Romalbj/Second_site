@@ -634,7 +634,7 @@ nav {
     color: transparent;
     background-clip: text;
     background-repeat: no-repeat;
-    background-image: linear-gradient(180deg, #3f00ff, #ff007d);
+    background-image: linear-gradient(180deg, #ff007d, #ff007d);
     background-size: 100%;
 }
 

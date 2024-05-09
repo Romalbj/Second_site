@@ -64,7 +64,7 @@ let activated = false;
 
 window.addEventListener('scroll', () => {
     if(
-            pageYOffset > container.offsetTop - container.offsetHeight - 200
+            pageYOffset > container.offsetTop - container.offsetHeight - 400
             && activated === false
     ) {
         counters.forEach(counter => {
