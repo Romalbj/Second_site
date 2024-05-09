@@ -602,6 +602,30 @@ nav {
     background-color: transparent;
 }
 
+.counters {
+    background-color: greenyellow;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counters div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.counter {
+    background-color: yellow;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 
 /* for medium devices */
