@@ -98,6 +98,83 @@ window.addEventListener('scroll', () => {
 });
 
 
+const counters_2 = document.querySelectorAll('.counters_2 span');
+const container_2 = document.querySelector('.counters_2');
+let activated_2 = false;
+
+window.addEventListener('scroll', () => {
+    if(
+            pageYOffset > container_2.offsetTop - container_2.offsetHeight - 400
+            && activated_2 === false
+    ) {
+        counters_2.forEach(counter => {
+            counter.innerText = 0;
+
+            let count_2 = 0;
+
+            function updateCount_2() {
+                const target_2 = parseInt(counter.dataset.count);
+                if(count_2 < target_2) {
+                    count_2++;
+                    counter.innerText = count_2;
+                    setTimeout(updateCount_2, 10);
+                } else {
+                    counter.innerText = target_2;
+                }
+            }
+            updateCount_2();
+            activated_2 = true;
+        });
+    } else if(
+        pageYOffset < container_2.offsetTop - container_2.offsetHeight - 500
+        || pageYOffset === 0
+        && activated_2 === true
+ ) {
+    counters_2.forEach(counter => {
+            counter.innerText= 0;
+    });
+        activated_2 = false;
+    }
+});
+
+const counters_3 = document.querySelectorAll('.counters_3 span');
+const container_3 = document.querySelector('.counters_3');
+let activated_3 = false;
+
+window.addEventListener('scroll', () => {
+    if(
+            pageYOffset > container_3.offsetTop - container_3.offsetHeight - 400
+            && activated_3 === false
+    ) {
+        counters_3.forEach(counter => {
+            counter.innerText = 0;
+
+            let count_3 = 0;
+
+            function updateCount_3() {
+                const target_3 = parseInt(counter.dataset.count);
+                if(count_3 < target_3) {
+                    count_3++;
+                    counter.innerText = count_3;
+                    setTimeout(updateCount_3, 10);
+                } else {
+                    counter.innerText = target_3;
+                }
+            }
+            updateCount_3();
+            activated_3 = true;
+        });
+    } else if(
+        pageYOffset < container_3.offsetTop - container_3.offsetHeight - 500
+        || pageYOffset === 0
+        && activated_3 === true
+ ) {
+    counters_3.forEach(counter => {
+            counter.innerText= 0;
+    });
+        activated_3 = false;
+    }
+});
 
 
 
