@@ -515,7 +515,6 @@ nav {
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    position: relative;
 }
 
 .credit ul {
