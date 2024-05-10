@@ -514,10 +514,12 @@ nav {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
 }
 
 .credit ul {
-    padding: 0 2% 5% 2%;
+    padding: 0 2% 1% 2%;
     margin: 0;
     height: auto;
     width: 100vw;
@@ -525,6 +527,7 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     column-gap: 1vw;
     row-gap: 3vw;
+    /*background-color: greenyellow;*/
 
 }
 
@@ -647,6 +650,47 @@ nav {
     color: #ff007d;
 }
 
+.button_container {
+    width: 100vw;
+    padding: 1% 0 1.5% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: blueviolet;*/
+    height: 10vh;
+    margin: 0;
+}
+
+.more_button {
+    text-decoration: none;
+    background-color: #ff007d;
+    color: white;
+    height: 80%;
+    display: flex;
+    padding: 2% 2% 2% 4.5%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    border-radius: 40px;
+    transition: .3s;
+
+}
+
+.more_button i {
+    opacity: 0;
+    transition: opacity .2s, .4s;
+    transform: rotate(90deg);
+}
+
+.more_button:hover i {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.more_button:hover {
+    padding-right: 4%;
+}
 
 /* for medium devices */
 @media screen and (min-width: 576px) {
