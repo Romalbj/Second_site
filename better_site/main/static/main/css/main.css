@@ -515,6 +515,7 @@ nav {
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
+    /*background-color: rebeccapurple;*/
 }
 
 .credit ul {
@@ -651,12 +652,12 @@ nav {
 
 .button_container {
     width: 100vw;
-    padding: 1% 0 1.5% 0;
+    padding: 5% 0 1% 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*background-color: blueviolet;*/
-    height: 10vh;
+    /*background-color: #2b6be2;*/
+    height: 12vh;
     margin: 0;
 }
 
@@ -680,16 +681,22 @@ nav {
     opacity: 0;
     transition: opacity .2s, .4s;
     transform: rotate(90deg);
+    color: white;
 }
 
 .more_button:hover i {
     opacity: 1;
     transform: rotate(0deg);
+    color: #ff007d;
 }
 
 .more_button:hover {
     padding-right: 4%;
+    background-color: #fcd8e2;
+    color: #ff007d;
+    border: 2px solid #ff007d;
 }
+
 
 /* for medium devices */
 @media screen and (min-width: 576px) {
