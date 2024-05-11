@@ -694,7 +694,8 @@ nav {
     padding-right: 4%;
     background-color: #fcd8e2;
     color: #ff007d;
-    border: 2px solid #ff007d;
+    /*border: 2px solid #ff007d;*/
+    box-shadow: inset 0px 0px 0px 2px #ff007d;
 }
 
 
