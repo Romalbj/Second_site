@@ -77,7 +77,7 @@ window.addEventListener('scroll', () => {
                 if(count < target) {
                     count++;
                     counter.innerText = count;
-                    setTimeout(updateCount, 10);
+                    setTimeout(updateCount, 5);
                 } else {
                     counter.innerText = target;
                 }
@@ -117,7 +117,7 @@ window.addEventListener('scroll', () => {
                 if(count_2 < target_2) {
                     count_2++;
                     counter.innerText = count_2;
-                    setTimeout(updateCount_2, 10);
+                    setTimeout(updateCount_2, 5);
                 } else {
                     counter.innerText = target_2;
                 }
@@ -156,7 +156,7 @@ window.addEventListener('scroll', () => {
                 if(count_3 < target_3) {
                     count_3++;
                     counter.innerText = count_3;
-                    setTimeout(updateCount_3, 10);
+                    setTimeout(updateCount_3, 5);
                 } else {
                     counter.innerText = target_3;
                 }

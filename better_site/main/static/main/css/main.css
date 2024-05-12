@@ -548,6 +548,10 @@ nav {
     transition: .3s;
 }
 
+.credit .credit_stat {
+    padding: 0;
+}
+
 .credit p {
     margin: 0;
     padding: 3% 7% 5% 7%;
@@ -625,6 +629,10 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 20px;
+    background-color: #fcd8e2;
+    box-shadow: inset 0px 0px 0px 2px #ff007d;
+
 }
 .counter {
     height: 100%;
