@@ -524,7 +524,7 @@ nav {
     height: auto;
     width: 100vw;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     column-gap: 1vw;
     row-gap: 3vw;
     /*background-color: greenyellow;*/
@@ -727,6 +727,23 @@ nav {
 
 }
 
+@media screen and (max-width: 1116px) {
+
+/*        .credit ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            row-gap: 3vw;
+            padding-right: 0;
+            padding-left: 0;
+    }*/
+
+    .credit ul li {
+        min-height: 45vh;
+        max-width: 50vh;
+        width: 60vh;
+    }
+}
+
 @media screen and (max-width: 767px) {
 
     .nav_menu {
@@ -782,12 +799,34 @@ nav {
         padding-top: 10%;
         font-size: 1.5rem;
     }
+
+    .scroll_text p {
+        font-size: 4rem;
+    }
+
+    .container {
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 490px) {
       .relevant {
         font-size: 2rem;
      }
+
+        .credit ul {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 3vw;
+            padding-right: 0;
+            padding-left: 0;
+    }
+
+    .credit ul li {
+        min-height: 40vh;
+        max-width: 45vh;
+        width: 40vh;
+    }
 }
 
 @media screen and (max-width: 570px) {
@@ -889,6 +928,61 @@ nav {
     }
 
 
+}
+
+@media screen and (max-width: 736px) {
+
+    .credit ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        column-gap: 3vw;
+        row-gap: 3vw;
+    }
+
+    .credit ul li {
+        padding: 0 2% 2% 2%;
+        margin: 0;
+        height: 23vh;
+        width: 43vh;
+
+    }
+}
+
+
+@media screen and (max-width: 646px) {
+
+    .credit ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 3vw;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .credit ul li {
+        min-height: 40vh;
+        max-width: 65vh;
+        width: 70vh;
+    }
+}
+
+@media screen and (max-width: 490px) {
+      .relevant {
+        font-size: 2rem;
+     }
+
+        .credit ul {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 3vw;
+            padding-right: 0;
+            padding-left: 0;
+    }
+
+    .credit ul li {
+        min-height: 30vh;
+        max-width: 45vh;
+    }
 }
 
 
