@@ -707,6 +707,78 @@ nav {
 }
 
 
+.footerContainer {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #131313;
+}
+
+.media {
+    margin: 0;
+    padding: 5vh 10vh 3vh 5vh;
+/*    background-color: #e8e2e2;*/
+    display: felx;
+    align-items: center;
+    justify-content: center;
+}
+
+.media p {
+    font-size: 1.4rem;
+    color: #ff007d;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+/*    background-color: greenyellow;*/
+}
+
+.links {
+    margin: 0;
+    padding: 2vh 0 0 0;
+/*    background-color: blueviolet;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.7rem;
+    gap: 1.5rem;
+}
+
+.links span {
+    transition: .3s;
+}
+
+.links span:hover {
+    color: #ff007d;
+}
+
+
+.foot-bottom {
+    margin: 0;
+    height: auto;
+    padding: 0 0 0 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+/*    background-color: #97b961;*/
+}
+
+.foot-bottom p, .foot-bottom a {
+/*    background-color: red;*/
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 1rem;
+    height: 100%;
+    text-decoration: none;
+}
+
+
 /* for medium devices */
 @media screen and (min-width: 576px) {
 

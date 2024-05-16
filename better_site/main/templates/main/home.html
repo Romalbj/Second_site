@@ -42,12 +42,16 @@
             <ul class="rec_list">
 
                 {% for post in articles %}
+                    {% if post.id <= 5 %}
 
                 <li class="article_rec">
                     <div class="article" style="background-image: url('{{post.photo.url}}');">
                         <p class="name_article" >{{post.title}}</p>
                     </div>
                 </li>
+                    {% else %}
+                        {% endif %}
+
                 {% endfor %}
 
             </ul>
@@ -116,11 +120,14 @@
                 </div>
             </li>
             {% for post in articles %}
+                {% if post.id <= 5 %}
             <li class="credit_article" style="background-image: url('{{post.photo.url}}');">
                 <div>
                     <p>{{post.title}}</p>
                 </div>
             </li>
+                {% else %}
+                    {% endif %}
             {% endfor %}
         </ul>
 
@@ -170,11 +177,14 @@
                 </div>
             </li>
             {% for post in articles %}
+                {% if post.id <= 5 %}
             <li class="credit_article" style="background-image: url('{{post.photo.url}}');">
                 <div>
                     <p>{{post.title}}</p>
                 </div>
             </li>
+                {% else %}
+                    {% endif %}
             {% endfor %}
         </ul>
 
@@ -229,11 +239,14 @@
                 </div>
             </li>
             {% for post in articles %}
+                {% if post.id <= 5 %}
             <li class="credit_article" style="background-image: url('{{post.photo.url}}');">
                 <div>
                     <p>{{post.title}}</p>
                 </div>
             </li>
+                {% else %}
+                    {% endif %}
             {% endfor %}
         </ul>
 
@@ -252,44 +265,6 @@
 <!--    </div>-->
 
 
-
-    <div class="shit">
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.</span>
-    </div>
+    <footer></footer>
 
 {% endblock %}
