@@ -456,6 +456,7 @@ nav {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 
@@ -765,6 +766,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    flex-direction: column;
 /*    background-color: #97b961;*/
 }
 
@@ -800,14 +802,6 @@ nav {
 }
 
 @media screen and (max-width: 1116px) {
-
-/*        .credit ul {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            row-gap: 3vw;
-            padding-right: 0;
-            padding-left: 0;
-    }*/
 
     .credit ul li {
         min-height: 45vh;
@@ -878,6 +872,10 @@ nav {
 
     .container {
         align-items: center;
+    }
+
+    .footerContainer {
+        padding-bottom: 4rem;
     }
 }
 
@@ -1079,6 +1077,11 @@ nav {
     .list_articles ul li {
         width: 55vw;
         height: 42vw;
+    }
+    .info h2, .info p {
+        width: 80vw;
+        text-align: center;
+        /*font-size: 1rem;*/
     }
 
 }

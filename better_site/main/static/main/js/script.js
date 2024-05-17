@@ -36,7 +36,7 @@ arrow_backward.addEventListener('click', () => {
     scrollContainer.scrollLeft -= 500;
 });
 
-
+//counters
 let valueDisplays = document.querySelectorAll(".num");
 let interval = 5000;
 
@@ -57,7 +57,7 @@ valueDisplays.forEach((valueDisplay) => {
 });
 
 
-
+//counters 2, final
 const counters = document.querySelectorAll('.counters span');
 const container = document.querySelector('.counters');
 let activated = false;
