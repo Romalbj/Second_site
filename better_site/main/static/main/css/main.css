@@ -12,7 +12,7 @@
 
     --body-font: "Work Sans", sans-serif;
     --h1-font-size: 1.5rem;
-    --normal-font-size: 1.1rem;
+    --normal-font-size: 1rem;
     --tiny-font-size: .625rem;
 
     --z-tooltip: 10;
@@ -121,6 +121,7 @@ nav {
 .nav_menu {
     height: 100%;
     padding-right: 6vw;
+    padding-left: 3vw;
 }
 
 
@@ -133,7 +134,14 @@ nav {
     font-size: 1.5rem;
 }
 
-
+.nav_item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
 
 .nav_link {
     flex-direction: column;
@@ -143,23 +151,19 @@ nav {
     font-weight: 600;
     text-decoration: none;
     font-size: var(--normal-font-size);
-
     opacity: .3;
     filter: blur(.4px);
-
 
 }
 
 .nav_list  {
-    justify-content: space-around;
     display: flex;
+    justify-content: space-around;
     align-items: center;
     height: 100%;
     margin: 0;
     padding: 0;
 }
-
-
 
 
 .active {
@@ -168,13 +172,6 @@ nav {
     transition: .3s;
 
 }
-
-/*scroll header animation */
-.scroll-header {
-    box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
-}
-
-
 
 
 .best_articles {
@@ -835,6 +832,10 @@ nav {
         color: black;
     }
 
+    .nav_name {
+        display: none;
+    }
+
     .active {
         color: #ff007d;
         opacity: 1;
@@ -879,25 +880,6 @@ nav {
     }
 }
 
-@media screen and (max-width: 490px) {
-      .relevant {
-        font-size: 2rem;
-     }
-
-        .credit ul {
-            display: grid;
-            grid-template-columns: 1fr;
-            row-gap: 3vw;
-            padding-right: 0;
-            padding-left: 0;
-    }
-
-    .credit ul li {
-        min-height: 40vh;
-        max-width: 45vh;
-        width: 40vh;
-    }
-}
 
 @media screen and (max-width: 570px) {
         .info h2  {
