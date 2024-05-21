@@ -565,27 +565,6 @@ nav {
     position: relative;
 }
 
-.credit_stat_black  {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-.credit_stat_black p {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(0px);
-}
-
 .black {
     background-color: #131313;
 }
@@ -599,16 +578,6 @@ nav {
     color: rgba(255, 255, 255, 0.8);
 }
 
-.credit_stat_black p {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-}
 
 .counters {
     width: 100vw;
@@ -630,8 +599,17 @@ nav {
     border-radius: 20px;
     background-color: #fcd8e2;
     box-shadow: inset 0px 0px 0px 2px #ff007d;
-
+    transition: .3s;
 }
+
+.counters_black div {
+    background-color: #380614;
+}
+
+/*.counters_black:hover div {
+    background-color: #fcd8e2;
+}*/
+
 .counter {
     height: 100%;
     margin: 0;
@@ -680,7 +658,6 @@ nav {
     font-size: 1.3rem;
     border-radius: 40px;
     transition: .3s;
-
 }
 
 .more_button i {
@@ -702,6 +679,11 @@ nav {
     color: #ff007d;
     /*border: 2px solid #ff007d;*/
     box-shadow: inset 0px 0px 0px 2px #ff007d;
+}
+
+
+.more_button_black:hover {
+    background-color: #380614;
 }
 
 
