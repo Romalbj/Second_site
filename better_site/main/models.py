@@ -8,7 +8,7 @@ class Articles(models.Model):
     CATEGORIES = [(credit, 'Кредитки'), (debit, 'Дебетухи'), (savings, 'Накопилка')]
 
     title = models.CharField(max_length=255)
-    category = models.CharField(max_length=50, choices=CATEGORIES, blank=False, default=1)
+    category = models.CharField(max_length=50, choices=CATEGORIES, blank=False)
     content = models.TextField()
     photo = models.ImageField(upload_to="images")
     time_create = models.DateTimeField(auto_now_add=True)

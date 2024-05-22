@@ -1,0 +1,32 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+
+<div class="credit_articles_list">
+
+ <ul>
+     {% for post in articles %}
+        {% if post.category == "credit" %}
+                <li>
+                    <div class="post">
+                        <div class="image" style="background-image: url('{{post.photo.url}}');"></div>
+                        <div class="all_info">
+                            <p>{{post.title}}</p>
+                            <p>{{post.time_update}}</p>
+                            <p>{{post.content | truncatechars:100 }}</p>
+                        </div>
+                    </div>
+                </li>
+        {% endif %}
+     {% endfor %}
+
+ </ul>
+
+
+</div>
+
+
+{% endblock %}

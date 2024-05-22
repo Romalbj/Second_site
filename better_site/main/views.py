@@ -5,3 +5,9 @@ def home(request):
         'articles': Articles.objects.all(),
     }
     return render(request, 'main/home.html', context)
+
+def credit(request):
+    context = {
+        'articles': Articles.objects.all(),
+    }
+    return render(request, 'main/credit.html', context)
