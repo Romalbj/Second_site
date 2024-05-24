@@ -761,14 +761,14 @@ nav {
 
 
 .credit_articles_list {
-    margin: 15vh 0 10vh 0;
+    margin: 10vh 0 10vh 0;
     padding: 5vh 0 0 20vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     /*background-color: greenyellow;*/
-    border-top: 4px solid #ff007d;
+    /*border-top: 4px solid #ff007d;*/
 }
 
 .credit_articles_list ul {
@@ -787,6 +787,7 @@ nav {
     width: 100%;
     height: 35vh;
     margin: 0 0 2vh 0;
+    padding: 2vh 0 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -829,12 +830,14 @@ nav {
 .credit_articles_list .all_info {
     /*background-color: darkred;*/
     margin: 0 0 0 5vh;
+    padding: 2vh 0 0 0;
     height: 100%;
     width: 55%;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: flex-start;
+    border-top: 1px solid #ff007d;
 }
 
 .credit_articles_list .title {
@@ -861,6 +864,11 @@ nav {
     font-weight: 300;
     line-height: 1.5rem;
 }
+
+.credit_articles_list i, .credit_articles_list .time_create {
+    color: #ff007d;
+}
+
 
 
 /* for medium devices */
