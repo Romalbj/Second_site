@@ -844,6 +844,7 @@ nav {
     font-size: 1.5rem;
     font-weight: 550;
     line-height: 1.5rem;
+    transition: .3s;
 }
 
 .credit_articles_list .time {
@@ -869,6 +870,9 @@ nav {
     color: #ff007d;
 }
 
+.credit_articles_list .post:hover .title {
+    color: #ff007d;
+}
 
 
 /* for medium devices */
