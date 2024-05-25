@@ -897,6 +897,10 @@ nav {
 
 @media screen and (max-width: 1116px) {
 
+    .recommendations {
+        margin-top: 5vh;
+    }
+
     .credit ul li {
         min-height: 45vh;
         max-width: 50vh;
@@ -1004,6 +1008,10 @@ nav {
     .info p  {
         text-align: center;
         font-size: 1.3rem;
+    }
+
+    .recommendations {
+        margin-top: 0;
     }
 }
 
