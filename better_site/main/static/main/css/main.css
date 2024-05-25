@@ -762,7 +762,7 @@ nav {
 
 .credit_articles_list {
     margin: 10vh 0 10vh 0;
-    padding: 5vh 0 0 20vh;
+    padding: 5vh 0 0 10vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -785,7 +785,7 @@ nav {
 
 .credit_articles_list ul li {
     width: 100%;
-    height: 35vh;
+    min-height: 35vh;
     margin: 0 0 2vh 0;
     padding: 2vh 0 0 0;
     display: flex;
@@ -819,8 +819,7 @@ nav {
 
 .credit_articles_list .image {
     min-width: 40%;
-    height: 35vh;
-    height: 3;
+    min-height: 35vh;
     border-radius: 20px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -844,12 +843,13 @@ nav {
     font-size: 1.5rem;
     font-weight: 550;
     line-height: 1.5rem;
-    transition: .3s;
+    transition: .2s;
 }
 
 .credit_articles_list .time {
     line-height: 1.5rem;
     margin: 0;
+    font-size: 1rem;
 }
 
 .credit_articles_list .time_create {
@@ -901,6 +901,23 @@ nav {
         min-height: 45vh;
         max-width: 50vh;
         width: 60vh;
+    }
+
+    .credit_articles_list .title {
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    }
+
+    .credit_articles_list .time {
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+
+    .credit_articles_list .contents {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.3rem;
     }
 }
 
@@ -975,6 +992,7 @@ nav {
     .footerContainer {
         padding-bottom: 4rem;
     }
+
 }
 
 
@@ -1112,6 +1130,40 @@ nav {
         min-height: 40vh;
         max-width: 65vh;
         width: 70vh;
+    }
+
+        .credit_articles_list {
+        margin: 5vh 0 5vh 0;
+        padding: 5vh 0 0 5vh;
+    }
+
+    .credit_articles_list .post {
+        flex-direction: column;
+    }
+
+    .credit_articles_list .all_info {
+        margin: 2vh 0;
+    }
+
+    .credit_articles_list .image {
+        min-width: 75%;
+        min-height: 30vh;
+    }
+
+    .credit_articles_list .all_info {
+        width: 80%;
+    }
+
+    .credit_articles_list .time_create {
+        margin-top: 1vh;
+    }
+
+    .credit_articles_list .time_update {
+        margin-bottom: 2vh;
+    }
+
+    .credit_articles_list ul li {
+        margin: 0 0 1vh 0;
     }
 }
 

@@ -7,26 +7,26 @@
 
     <div class="credit_articles_list">
 
-     <ul>
-         {% for post in articles %}
-            {% if post.category == "debit" %}
-                    <li>
-                        <a href="#">
-                            <div class="post">
-                                <div class="image" style="background-image: url('{{post.photo.url}}');"></div>
-                                <div class="all_info">
-                                    <p class="title">{{post.title}}</p>
-                                    <p class="time time_create"><i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;{{post.time_create}}</p>
-                                    <p class="time time_update">Обновлено&nbsp;&nbsp;{{post.time_update}}</p>
-                                    <p class="contents">{{post.content | truncatechars:200 }}</p>
+         <ul>
+             {% for post in articles %}
+                {% if post.category == "debit" %}
+                        <li>
+                            <a href="#">
+                                <div class="post">
+                                    <div class="image" style="background-image: url('{{post.photo.url}}');"></div>
+                                    <div class="all_info">
+                                        <p class="title">{{post.title}}</p>
+                                        <p class="time time_create"><i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;{{post.time_create}}</p>
+                                        <p class="time time_update">Обновлено&nbsp;&nbsp;{{post.time_update}}</p>
+                                        <p class="contents">{{post.content | truncatechars:200 }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-            {% endif %}
-         {% endfor %}
+                            </a>
+                        </li>
+                {% endif %}
+             {% endfor %}
 
-     </ul>
+         </ul>
 
 
     </div>
