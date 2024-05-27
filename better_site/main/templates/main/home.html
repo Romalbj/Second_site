@@ -114,20 +114,17 @@
                     </div>
                 </div>
             </li>
-            {% for post in articles %}
-                {% if post.id <= 5 %}
+            {% for post in credit %}
             <li class="credit_article" style="background-image: url('{{post.photo.url}}');">
                 <div>
                     <p>{{post.title}}</p>
                 </div>
             </li>
-                {% else %}
-                    {% endif %}
             {% endfor %}
         </ul>
 
         <div class="button_container">
-            <a href="#" class="more_button">Читать далее &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+            <a href="credit" class="more_button">Читать далее &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
         </div>
     </div>
 
@@ -171,20 +168,17 @@
                     </div>
                 </div>
             </li>
-            {% for post in articles %}
-                {% if post.id <= 5 %}
+            {% for post in debit %}
             <li class="credit_article" style="background-image: url('{{post.photo.url}}');">
                 <div>
                     <p>{{post.title}}</p>
                 </div>
             </li>
-                {% else %}
-                    {% endif %}
             {% endfor %}
         </ul>
 
         <div class="button_container">
-            <a href="#" class="more_button more_button_black">Читать далее &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+            <a href="debit" class="more_button more_button_black">Читать далее &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
         </div>
     </div>
 
@@ -233,20 +227,18 @@
                     </div>
                 </div>
             </li>
-            {% for post in articles %}
-                {% if post.id <= 5 %}
+            {% for post in savings %}
             <li class="credit_article" style="background-image: url('{{post.photo.url}}');">
                 <div>
                     <p>{{post.title}}</p>
                 </div>
             </li>
-                {% else %}
-                    {% endif %}
+
             {% endfor %}
         </ul>
 
         <div class="button_container">
-            <a href="#" class="more_button">Читать далее &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+            <a href="savings" class="more_button">Читать далее &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
         </div>
     </div>
 

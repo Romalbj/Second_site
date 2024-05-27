@@ -13,8 +13,12 @@ class Articles(models.Model):
     photo = models.ImageField(upload_to="images")
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
-    likes_amount = models.IntegerField()
-    comments_amount = models.IntegerField()
+    likes_amount = models.IntegerField(default=0)
+    comments_amount = models.IntegerField(default=0)
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name = 'Article'
+        verbose_name_plural = 'Articles'
