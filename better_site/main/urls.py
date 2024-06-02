@@ -1,5 +1,5 @@
-from django.urls import path
 from . import views
+from django.urls import path, include
 
 urlpatterns = [
     path('', views.home, name='home1'),
@@ -7,5 +7,5 @@ urlpatterns = [
     path('credit', views.credit, name='credit'),
     path('debit', views.debit, name='debit'),
     path('savings', views.savings, name='savings'),
-
+    path('article/', include('article_detail.urls'), name='article'),
 ]
