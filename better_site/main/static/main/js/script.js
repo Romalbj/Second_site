@@ -1,13 +1,25 @@
+//Поиск категории в url
 const activePage = window.location.pathname;
-//const Path = activePage.split("/");
-//if(Path.includes("credit")|Path.includes("debit")|Path.includes("savings"))
-//    {console.log('Hi')};
-//console.log(Path);
+const Path_list = activePage.split("/");
+if(Path_list.includes("credit"))
+    {Path_category = "credit"};
+
+if(Path_list.includes("debit"))
+    {Path_category = "debit"};
+
+if(Path_list.includes("savings"))
+    {Path_category = "savings"};
+
+if(Path_list.includes("home"))
+    {Path_category = "home"};
+
+console.log(Path_category);
 console.log(activePage);
+
 const navLinks = document.querySelectorAll('.nav_link');
 console.log(navLinks);
 navLinks.forEach (link => {
-    if(link.href.includes(`${activePage}`))
+    if(link.href.includes(`${Path_category}`))
         link.classList.add('active');
 })
 
