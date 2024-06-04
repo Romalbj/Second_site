@@ -1,4 +1,8 @@
 const activePage = window.location.pathname;
+//const Path = activePage.split("/");
+//if(Path.includes("credit")|Path.includes("debit")|Path.includes("savings"))
+//    {console.log('Hi')};
+//console.log(Path);
 console.log(activePage);
 const navLinks = document.querySelectorAll('.nav_link');
 console.log(navLinks);

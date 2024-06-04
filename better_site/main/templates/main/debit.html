@@ -11,7 +11,7 @@
              {% for post in articles %}
                 {% if post.category == "debit" %}
                         <li>
-                            <a href="{% url 'test' id=post.id %}">
+                            <a href="{% url 'test' category=post.category id=post.id %}">
                                 <div class="post">
                                     <div class="image" style="background-image: url('{{post.photo.url}}');"></div>
                                     <div class="all_info">
