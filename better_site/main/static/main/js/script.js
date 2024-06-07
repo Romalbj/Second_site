@@ -15,7 +15,6 @@ if(Path_list.includes("home"))
 
 console.log(Path_category);
 console.log(activePage);
-
 const navLinks = document.querySelectorAll('.nav_link');
 console.log(navLinks);
 navLinks.forEach (link => {

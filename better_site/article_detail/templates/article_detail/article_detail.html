@@ -1,0 +1,40 @@
+
+{% extends 'main/layout.html' %}
+
+{% block title %}Article{% endblock %}
+
+
+{% block content %}
+    <div class="detail_card" style="background-image: url('{{article.photo.url}}');">
+        <p class="detail_title">{{article.title}}</p>
+    </div>
+
+    <div class="article_info">
+            <p>
+                <span><i class="fa-regular fa-calendar"></i>&nbsp;Опубликовано </span>
+                <span>{{article.time_create}}</span>
+            </p>
+            <p>
+                <span><i class="fa-regular fa-calendar"></i>&nbsp;Обновлено</span>
+                <span>{{article.time_update}}</span>
+            </p>
+            <p>
+                <span><i class="fa-regular fa-comment"></i>&nbsp;Комментариев </span>
+                <span>{{article.comments_amount}}</span>
+            </p>
+            <p>
+                <span><i class="fa-regular fa-heart"></i>&nbsp;Лайков</span>
+                <span>{{article.likes_amount}}</span>
+            </p>
+    </div>
+
+    <div class="article_content">
+        {{article.content | safe}}
+    </div>
+
+
+<!--<i class="fa-regular fa-comment"></i> comment-->
+<!--<i class="fa-regular fa-thumbs-up"></i>-->
+<!--<i class="fa-regular fa-heart"></i> like-->
+
+{% endblock %}

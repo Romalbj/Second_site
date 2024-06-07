@@ -42,15 +42,14 @@
             <ul class="rec_list">
 
                 {% for post in articles %}
-                    {% if post.id <= 5 %}
 
                 <li class="article_rec">
-                    <div class="article" style="background-image: url('{{post.photo.url}}');">
-                        <p class="name_article" >{{post.title}}</p>
-                    </div>
+                    <a href="{% url 'article_detail' category=post.category  id=post.id %}">
+                        <div class="article" style="background-image: url('{{post.photo.url}}');">
+                            <p class="name_article" >{{post.title}}</p>
+                        </div>
+                    </a>
                 </li>
-                    {% else %}
-                        {% endif %}
 
                 {% endfor %}
 
@@ -116,9 +115,11 @@
             </li>
             {% for post in credit %}
             <li class="credit_article" style="background-image: url('{{post.photo.url}}');">
-                <div>
-                    <p>{{post.title}}</p>
-                </div>
+                <a href="{% url 'article_detail' category=post.category  id=post.id %}">
+                    <div>
+                        <p>{{post.title}}</p>
+                    </div>
+                </a>
             </li>
             {% endfor %}
         </ul>
@@ -170,9 +171,11 @@
             </li>
             {% for post in debit %}
             <li class="credit_article" style="background-image: url('{{post.photo.url}}');">
-                <div>
-                    <p>{{post.title}}</p>
-                </div>
+                <a href="{% url 'article_detail' category=post.category  id=post.id %}">
+                    <div>
+                        <p>{{post.title}}</p>
+                    </div>
+                </a>
             </li>
             {% endfor %}
         </ul>
@@ -229,9 +232,11 @@
             </li>
             {% for post in savings %}
             <li class="credit_article" style="background-image: url('{{post.photo.url}}');">
-                <div>
-                    <p>{{post.title}}</p>
-                </div>
+                <a href="{% url 'article_detail' category=post.category  id=post.id %}">
+                    <div>
+                        <p>{{post.title}}</p>
+                    </div>
+                </a>
             </li>
 
             {% endfor %}

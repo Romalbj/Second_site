@@ -5,7 +5,7 @@ def home(request):
         'credit': Articles.objects.filter(category='credit').order_by('-time_update')[0:5],
         'debit': Articles.objects.filter(category='debit').order_by('-time_update')[0:5],
         'savings': Articles.objects.filter(category='savings').order_by('-time_update')[0:5],
-        'articles': Articles.objects.all(),
+        'articles': Articles.objects.order_by('-time_update')[0:8],
     }
     return render(request, 'main/home.html', context)
 
