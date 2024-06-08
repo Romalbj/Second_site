@@ -836,11 +836,10 @@ nav {
 .credit_articles_list .post {
     width: 100%;
     height: 100%;
-    /*background-color: yellow;*/
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -903,7 +902,6 @@ nav {
 
 
 .detail_card {
-/*    background-color: rebeccapurple;*/
     margin: 12vh 0 0 0;
     padding: 0;
     height: 50vh;
