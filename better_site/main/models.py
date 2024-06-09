@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 class Articles(models.Model):
 
@@ -12,7 +13,7 @@ class Articles(models.Model):
     content = models.TextField()
     photo = models.ImageField(upload_to="images")
     time_create = models.DateTimeField(auto_now_add=True)
-    time_update = models.DateTimeField(auto_now=True)
+    time_update = models.DateTimeField(auto_now_add=True)
     likes_amount = models.IntegerField(default=0)
     comments_amount = models.IntegerField(default=0)
 
@@ -22,3 +23,4 @@ class Articles(models.Model):
     class Meta:
         verbose_name = 'Article'
         verbose_name_plural = 'Articles'
+

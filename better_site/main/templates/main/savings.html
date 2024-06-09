@@ -9,7 +9,6 @@
 
          <ul>
              {% for post in articles %}
-                {% if post.category == "savings" %}
                         <li>
                             <a href="{% url 'article_detail' category=post.category  id=post.id %}">
                                 <div class="post">
@@ -23,7 +22,6 @@
                                 </div>
                             </a>
                         </li>
-                {% endif %}
              {% endfor %}
 
          </ul>
