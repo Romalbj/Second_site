@@ -1,0 +1,14 @@
+
+{% extends 'main/layout.html' %}
+
+{% block title %}Article{% endblock %}
+
+
+{% block content %}
+    <form class="site_form" action="/account/signup/" method="post">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Signup">
+    </form>
+
+{% endblock %}

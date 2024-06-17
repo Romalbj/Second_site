@@ -972,6 +972,7 @@ nav {
     line-height: 1.8rem;
     width: 100%;
     margin: 1% 0;
+/*    text-indent: 20px; красная строка*/
 }
 
 .article_content p:first-child {
@@ -1328,6 +1329,10 @@ nav {
     .credit ul li {
         min-height: 30vh;
         max-width: 45vh;
+    }
+
+    .article_content p {
+        word-spacing: 2px;
     }
 }
 
