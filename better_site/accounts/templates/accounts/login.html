@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="form_wrapper">
-    <form class="site_form site_form_login" action="/account/login/" method="post">
+    <form class="site_form site_form_login" action="/account/{{category}}/{{id}}/login/" method="post">
         {% csrf_token %}
         <p class="register_label">Вход</p>
 
@@ -21,14 +21,14 @@
                 </div>
             </div>
 
-            <input class="confirm" type="submit" value="Войти">
+           <input class="confirm" type="submit" value="Войти">
 
             {% for message in messages %}
                 <p class="error_message">{{message}}</p>
             {% endfor %}
 
             <div class="to_login">
-                <p>Не зарегестрированы?&nbsp;<a href="{% url 'sign_up' %}">Регистрация</a></p>
+                <p>Не зарегестрированы?&nbsp;<a href="{% url 'sign_up' category=category id=id  %}">Регистрация</a></p>
             </div> 
 
          </div>

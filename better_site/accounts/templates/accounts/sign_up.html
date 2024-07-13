@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="form_wrapper">
-    <form class="site_form" action="/account/signup/" method="post">
+    <form class="site_form" action="/account/{{category}}/{{id}}/signup/" method="post">
         {% csrf_token %}
         <p class="register_label">Регистрация</p>
 
@@ -34,7 +34,7 @@
             {% endfor %}
 
             <div class="to_login">
-                <p>Уже зарегистрированы?&nbsp;<a href="{% url 'login' %}">Войти</a></p>
+                <p>Уже зарегистрированы?&nbsp;<a href="{% url 'login' category=category id=id  %}">Войти</a></p>
             </div>
 
          </div>
