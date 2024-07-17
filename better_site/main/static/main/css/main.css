@@ -786,6 +786,15 @@ nav {
     text-decoration: none;
 }
 
+.foot-bottom a {
+    color: #ff007d;
+    transition: .2s;
+}
+
+.foot-bottom a:hover {
+    color: white;
+}
+
 
 .credit_articles_list {
     margin: 10vh 0 10vh 0;
