@@ -15,8 +15,8 @@
                                     <div class="image" style="background-image: url('{{post.photo.url}}');"></div>
                                     <div class="all_info">
                                         <p class="title">{{post.title}}</p>
-                                        <p class="time time_create"><i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;{{post.time_create}}</p>
-                                        <p class="time time_update">Обновлено&nbsp;&nbsp;{{post.time_update}}</p>
+                                        <p class="time time_create"><i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;{{post.time_create|date}}</p>
+                                        <p class="time time_update">Обновлено&nbsp;&nbsp;{{post.time_update|date}}</p>
                                         <p class="contents">{{post.content | truncatechars:220 | safe}}</p>
                                     </div>
                                 </div>
