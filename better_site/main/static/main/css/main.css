@@ -1215,6 +1215,67 @@ form input:focus {
 }
 
 
+.comments_container {
+    border-top: 1px solid #ff007d;
+/*    background-color: #ffe19c;*/
+    margin: 3vh 0;
+    padding: 3vh;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.comment {
+    width: 100%;
+    margin: 0 0 3vh 0;
+    padding: 2vh;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.comment:hover {
+    border-color: #ff007d;
+}
+
+.comment p {
+/*    background-color: #6c8fff;*/
+    width: 100%;
+    text-align: left;
+    padding: 0;
+}
+
+.comment span:first-child{
+    color: #ff007d;
+    transition: .2s;
+}
+
+.comment span:last-child{
+    color: rgba(0, 0, 0, 0.3);
+    transition: .2s;
+}
+
+.comment:hover span:last-child{
+    font-weight: 600;
+}
+
+.comment:hover span:first-child{
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
 /* for medium devices */
 @media screen and (min-width: 576px) {
 

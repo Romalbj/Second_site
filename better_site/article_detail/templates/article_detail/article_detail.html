@@ -34,6 +34,26 @@
         {{article.content | safe}}
     </div>
 
+    {% if not article.comments.all %}
+    <div class="no_comments">
+        <p>Еще нет комментариев</p>
+    </div>
+
+    {% else %}
+    <div class="comments_container">
+        {% for comment in  article.comments.all %}
+        <div class="comment">
+            <p class="user_time_info">
+                <span>{{comment.user}}</span>
+                <span>{{comment.time_create|date}}</span>
+            </p>
+            <p class="comment_content">{{comment.content}}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% endif %}
+
     <div class="login_button">
         <a href="{% url 'login' category=category id=id %}">Войти, чтобы оставить комментарий</a>
     </div>
