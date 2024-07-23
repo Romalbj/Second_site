@@ -71,9 +71,17 @@
         </div>
     </div>
 
-    <div class="login_button">
-        <a href="{% url 'login' category=category id=id %}">Войти, чтобы оставить комментарий</a>
-    </div>
+    {% if not user %}
+        <div class="login_button">
+            <a href="{% url 'login' category=category id=id %}">Войти, чтобы оставить комментарий</a>
+        </div>
+    {% endif %}
+
+<!--    <div class="login_button">-->
+<!--        <a href="{% url 'login' category=category id=id %}">Войти, чтобы оставить комментарий</a>-->
+<!--    </div>-->
+
+<!--{{user}}-->
 
 <!--<i class="fa-regular fa-comment"></i> comment-->
 <!--<i class="fa-regular fa-thumbs-up"></i>-->

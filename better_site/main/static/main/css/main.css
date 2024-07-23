@@ -1271,6 +1271,10 @@ form input:focus {
     letter-spacing: 0.1rem;
 }
 
+.comment_content {
+    font-size: 1.2rem;
+}
+
 .comments_label {
 /*    background-color: red;*/
     margin: 0;
@@ -1400,7 +1404,8 @@ textarea:focus ~ .place_holder {
 }
 
 .confirm_comment {
-    width: 40vw;
+    width: 30vw;
+    margin-bottom: 10vh;
 }
 
 

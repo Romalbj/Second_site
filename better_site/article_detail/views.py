@@ -17,4 +17,6 @@ def article_detail(request, id, category):
 
 
     article = Articles.objects.get(id=id)
-    return render(request, 'article_detail/article_detail.html', {'article': article, 'id': id, 'category': category, 'form': CommentForm})
+    user = request.user
+    return render(request, 'article_detail/article_detail.html', {'article': article, 'id': id, 'category': category, 'form': CommentForm,
+                                                                  'user': user})
