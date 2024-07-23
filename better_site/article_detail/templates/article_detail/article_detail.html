@@ -22,7 +22,7 @@
             </p>
             <p>
                 <span><i class="fa-regular fa-comment"></i>&nbsp;Комментариев </span>
-                <span>{{article.comments_amount}}</span>
+                <span>{{article.comments.all.count}}</span>
             </p>
             <p>
                 <span><i class="fa-regular fa-heart"></i>&nbsp;Лайков</span>
@@ -34,13 +34,17 @@
         {{article.content | safe}}
     </div>
 
+    <div class="comments_container">
+        <div class="comments_label">
+            <p>Комментарии {{article.comments.all.count}}</p>
+        </div>
     {% if not article.comments.all %}
     <div class="no_comments">
         <p>Еще нет комментариев</p>
     </div>
 
     {% else %}
-    <div class="comments_container">
+
         {% for comment in  article.comments.all %}
         <div class="comment">
             <p class="user_time_info">
