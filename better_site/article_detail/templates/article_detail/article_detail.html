@@ -36,7 +36,7 @@
 
     <div class="comments_container">
         <div class="comments_label">
-            <p>Комментарии {{article.comments.all.count}}</p>
+            <p>комментарии <span>{{article.comments.all.count}}</span></p>
         </div>
     {% if not article.comments.all %}
     <div class="no_comments">
@@ -64,9 +64,9 @@
                 {% csrf_token %}
                 <div class="comment_window">
                     {{form.content}}
+                    <p class="place_holder"><span>Оставить&nbsp;</span> <span>комментарий</span></p>
                 </div>
-                <input class="confirm confirm_comment" type="submit" value="Поделиться">
-
+                <input class="confirm confirm_comment" type="submit" value="Опубликовать">
             </form>
         </div>
     </div>
