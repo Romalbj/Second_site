@@ -58,6 +58,19 @@
 
     {% endif %}
 
+    <div class="comment_form_conrainer">
+        <div class="comment_form">
+            <form class="form_comments" method="POST" action="/article/{{category}}/{{id}}">
+                {% csrf_token %}
+                <div class="comment_window">
+                    {{form.content}}
+                </div>
+                <input class="confirm confirm_comment" type="submit" value="Поделиться">
+
+            </form>
+        </div>
+    </div>
+
     <div class="login_button">
         <a href="{% url 'login' category=category id=id %}">Войти, чтобы оставить комментарий</a>
     </div>

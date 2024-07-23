@@ -1310,6 +1310,51 @@ form input:focus {
     font-size: 1.2rem;
 }
 
+.comment_form_conrainer {
+/*    background-color: red;*/
+    width: 70vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment_form {
+/*    background-color: #0077ff;*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_comments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+textarea {
+    margin: 0;
+    padding: 1vw 2vw;
+    width: 70vw;
+    border: 1px solid rgba(0,0,0, 0.15);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+textarea:focus {
+    outline: none;
+    border-color:  #ff007d;
+}
+
+.confirm_comment {
+    width: 40vw;
+}
+
 
 /* for medium devices */
 @media screen and (min-width: 576px) {
