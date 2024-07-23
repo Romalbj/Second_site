@@ -1306,7 +1306,7 @@ form input:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
+    margin: 0 0 2vh 0;
     padding: 0;
 }
 
