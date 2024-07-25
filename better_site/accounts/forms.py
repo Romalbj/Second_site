@@ -14,11 +14,15 @@ class CreateUserForm(UserCreationForm):
 
     password1 = forms.CharField(max_length=100,
                            widget= forms.TextInput
-                           (attrs={'placeholder':'Пароль'}))
+                           (attrs={'placeholder':'Пароль',
+                                   'type': 'password',
+                                   'class': 'password_field'}))
 
     password2 = forms.CharField(max_length=100,
                            widget= forms.TextInput
-                           (attrs={'placeholder':'Повторите пароль'}))
+                           (attrs={'placeholder':'Повторите пароль',
+                                   'type': 'password',
+                                   'class': 'password_field'}))
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']

@@ -1098,6 +1098,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
 }
 
 input {
@@ -1124,6 +1125,12 @@ form input:focus {
     justify-content: center;
     font-size: 1.2rem;
     color: #ff007da6;
+}
+
+.eye_icon {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
 }
 
 .confirm {

@@ -11,13 +11,16 @@
 
         <div class="form">
             <div class="input name">
-                <div class="field"><i class="fa-solid fa-circle-user"></i>
+                <div class="field">
+                    <i class="fa-solid fa-circle-user"></i>
                     <input type="text" name="username" placeholder="Имя пользователя">
                 </div>
             </div>
             <div class="input password1">
-                <div class="field"><i class="fa-solid fa-lock"></i>
-                    <input type="text" name="password" placeholder="Пароль">
+                <div class="field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" class="password_field" name="password" placeholder="Пароль">
+                    <i class="fa-solid fa-eye-slash eye_icon"></i>
                 </div>
             </div>
 
@@ -33,6 +36,34 @@
 
          </div>
 </div>
+
+<script>
+    const FormContainer = document.querySelector('.form_wrapper'),
+            EyeIcon = document.querySelectorAll('.eye_icon'),
+            PasswordField = document.querySelectorAll('.password_field');
+
+    console.log(FormContainer, EyeIcon, PasswordField);
+        EyeIcon.forEach(icon =>{
+            console.log('icon_eye'),
+            icon.addEventListener("click", () => {
+                PasswordField.forEach(field => {
+                    if(field.type === "password"){
+                         field.type = "text";
+                        EyeIcon.forEach(icon =>{
+                            icon.classList.replace("fa-eye-slash", "fa-eye");
+                        })
+
+                    }else{
+                        field.type = "password";
+                        EyeIcon.forEach(icon =>{
+                            icon.classList.replace("fa-eye", "fa-eye-slash");
+                        })
+
+                    }
+                })
+            })
+        })
+</script>
 
 
 

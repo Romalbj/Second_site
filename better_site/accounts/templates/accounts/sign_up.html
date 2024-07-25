@@ -19,11 +19,19 @@
             </div>
 
             <div class="input password1">
-                <div class="field"><i class="fa-solid fa-lock"></i>{{form.password1}}</div>
+                <div class="field">
+                    <i class="fa-solid fa-lock"></i>
+                    {{form.password1}}
+                    <i class="fa-solid fa-eye-slash eye_icon"></i>
+                </div>
             </div>
 
             <div class="input password2">
-                <div class="field"><i class="fa-solid fa-lock"></i>{{form.password2}}</div>
+                <div class="field">
+                    <i class="fa-solid fa-lock"></i>
+                    {{form.password2}}
+                    <i class="fa-solid fa-eye-slash eye_icon"></i>
+                </div>
             </div>
 
             <input class="confirm" type="submit" value="Зарегистрироваться">
@@ -40,6 +48,33 @@
          </div>
 </div>
 
+<script>
+    const FormContainer = document.querySelector('.form_wrapper'),
+            EyeIcon = document.querySelectorAll('.eye_icon'),
+            PasswordField = document.querySelectorAll('.password_field');
+
+    console.log(FormContainer, EyeIcon, PasswordField);
+        EyeIcon.forEach(icon =>{
+            console.log('icon_eye'),
+            icon.addEventListener("click", () => {
+                PasswordField.forEach(field => {
+                    if(field.type === "password"){
+                         field.type = "text";
+                        EyeIcon.forEach(icon =>{
+                            icon.classList.replace("fa-eye-slash", "fa-eye");
+                        })
+
+                    }else{
+                        field.type = "password";
+                        EyeIcon.forEach(icon =>{
+                            icon.classList.replace("fa-eye", "fa-eye-slash");
+                        })
+
+                    }
+                })
+            })
+        })
+</script>
 
 
 {% endblock %}
