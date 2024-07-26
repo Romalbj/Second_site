@@ -1031,8 +1031,8 @@ nav {
 
 .site_form {
     background-color: rgba(255,255,255, 0.8);
-    width: 30vw;
-    height: 75vh;
+    width: 470px;
+    height: 520px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1183,8 +1183,8 @@ form input:focus {
 
 
 .site_form_login{
-    width: 30vw;
-    height: 50vh;
+    width: 420px;
+    height: 350px;
 }
 
 
@@ -1542,6 +1542,16 @@ textarea:focus ~ .place_holder {
         padding-bottom: 4rem;
     }
 
+    .site_form {
+        width: 430px;
+        height: 470px;
+    }
+
+    .site_form_login{
+        width: 400px;
+        height: 350px;
+    }
+
 }
 
 
@@ -1558,6 +1568,35 @@ textarea:focus ~ .place_holder {
     .recommendations {
         margin-top: 0;
     }
+
+    .site_form {
+        width: 70vw;
+        height: 420px;
+    }
+
+    .site_form_login{
+        width: 350px;
+        height: 300px;
+    }
+
+    input {
+        height: 4vh;
+    }
+
+    .register_label {
+        font-size: 1.5rem;
+    }
+
+    .input i {
+        font-size: 1rem;
+    }
+
+    .confirm {
+        height: 5vh;
+    }
+
+
+
 }
 
 /* for small devices */
@@ -1602,6 +1641,40 @@ textarea:focus ~ .place_holder {
     .nav_logo p {
         font-size: 1rem;
      }
+
+    .site_form {
+        width: 280px;
+        height: 330px;
+    }
+
+    .site_form_login{
+        width: 270px;
+        height: 250px;
+    }
+
+    input {
+        height: 3vh;
+    }
+
+    .register_label {
+        font-size: 1.5rem;
+        margin-top: 2%;
+    }
+
+    .input i {
+        font-size: 1rem;
+    }
+
+    .confirm {
+        height: 5vh;
+        margin-top: 1vh;
+        font-size: 0.8rem;
+    }
+
+    .to_login {
+        margin-top: 0;
+        font-size: 0.8rem;
+    }
 
 }
 
