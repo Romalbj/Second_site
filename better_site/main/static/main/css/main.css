@@ -541,7 +541,7 @@ nav {
     padding: 0 2% 2% 2%;
     margin: 0;
     height: 28vh;
-    width: 48vh;
+    width: 44vh;
     justify-self: center;
     display: flex;
     align-items: end;
@@ -567,7 +567,7 @@ nav {
 }
 
 .credit ul li:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .credit ul li:first-child:hover {
     transform: none;
