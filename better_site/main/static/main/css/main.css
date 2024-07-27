@@ -1662,7 +1662,7 @@ textarea:focus ~ .place_holder {
     }
 
     .input i {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .confirm {
