@@ -6,26 +6,22 @@
 {% block content %}
 
     <div class="best_articles">
-        <div class="best_article best_article_1">
+        {% for fresh in latest_article %}
+        <div class="best_article best_article_1" style= "background-image: url('{{fresh.photo.url}}');">
             <h3 class="art_title">
                 <p class="relevant">Свежее</p>
-                <p class="text">Как снять деньги с кредитной карты без последствий</p>
-                <p class="short_content"><br/><br/><br/>Многие задаются вопросом, как снять деньги с кредитной карты
-                    без процентов и с сохранением льготного периода. Если делать это напрямую, то обычно
-                    за такие операции предусмотрена заградительная комиссия и сразу начинают начисляться
-                    грабительские проценты.</p>
+                <p class="text">{{fresh.title}}</p>
+                <p class="short_content"><br/><br/><br/>{{latest_article_content | truncatechars:220}}</p>
             </h3>
 
         </div>
+        {% endfor %}
 
-        <div class="best_article best_article_2">
+        <div class="best_article best_article_2" style= "background-image: url('{{hottest_article.photo.url}}');">
             <h3 class="art_title">
                 <p class="relevant">Рекомендуем</p>
-                <p class="text">Как снять деньги с кредитной карты без последствий</p>
-                <p class="short_content"><br/><br/><br/>Многие задаются вопросом, как снять деньги с кредитной карты
-                    без процентов и с сохранением льготного периода. Если делать это напрямую, то обычно
-                    за такие операции предусмотрена заградительная комиссия и сразу начинают начисляться
-                    грабительские проценты.</p>
+                <p class="text">{{hottest_article.title}}</p>
+                <p class="short_content"><br/><br/><br/>{{hottest_article_article_content | truncatechars:220}}</p>
             </h3>
         </div>
 
