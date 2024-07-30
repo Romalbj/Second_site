@@ -186,6 +186,10 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
 }
 
+.best_articles a {
+    text-decoration: none;
+    color: black;
+}
 
 .best_article {
     padding: 2%;
@@ -194,7 +198,7 @@ nav {
     align-items: end;
     flex-direction: column-reverse;
     max-width: 100%;
-    min-height: 70vh;
+    min-height: 100%;
     text-align: left;
     border-radius: 30px;
     position: relative;

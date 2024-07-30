@@ -7,23 +7,26 @@
 
     <div class="best_articles">
         {% for fresh in latest_article %}
-        <div class="best_article best_article_1" style= "background-image: url('{{fresh.photo.url}}');">
-            <h3 class="art_title">
-                <p class="relevant">Свежее</p>
-                <p class="text">{{fresh.title}}</p>
-                <p class="short_content"><br/><br/><br/>{{latest_article_content | truncatechars:220}}</p>
-            </h3>
+        <a href="{% url 'article_detail' category=fresh.category  id=fresh.id %}">
+            <div class="best_article best_article_1" style= "background-image: url('{{fresh.photo.url}}');">
+                <h3 class="art_title">
+                    <p class="relevant">Свежее</p>
+                    <p class="text">{{fresh.title}}</p>
+                    <p class="short_content"><br/><br/><br/>{{latest_article_content | truncatechars:220}}</p>
+                </h3>
 
-        </div>
+            </div>
+        </a>
         {% endfor %}
-
-        <div class="best_article best_article_2" style= "background-image: url('{{hottest_article.photo.url}}');">
-            <h3 class="art_title">
-                <p class="relevant">Рекомендуем</p>
-                <p class="text">{{hottest_article.title}}</p>
-                <p class="short_content"><br/><br/><br/>{{hottest_article_article_content | truncatechars:220}}</p>
-            </h3>
-        </div>
+        <a href="{% url 'article_detail' category=hottest_article.category  id=hottest_article.id %}">
+            <div class="best_article best_article_2" style= "background-image: url('{{hottest_article.photo.url}}');">
+                <h3 class="art_title">
+                    <p class="relevant">Рекомендуем</p>
+                    <p class="text">{{hottest_article.title}}</p>
+                    <p class="short_content"><br/><br/><br/>{{hottest_article_article_content | truncatechars:220}}</p>
+                </h3>
+            </div>
+        </a>
 
 
 
