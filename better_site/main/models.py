@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from datetime import datetime
 
@@ -14,7 +15,7 @@ class Articles(models.Model):
     photo = models.ImageField(upload_to="images")
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now_add=True)
-    likes_amount = models.IntegerField(default=0)
+    likes = models.ManyToManyField(User, related_name='likes')
     comments_amount = models.IntegerField(default=0)
 
     def __str__(self):
