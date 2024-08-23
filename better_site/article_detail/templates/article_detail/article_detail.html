@@ -37,15 +37,14 @@
     <div class="comments_container">
 
         <div class="like-button">
+            <div class="heart-bg">
+                <form action="{% url 'like_article' category id %}" method="POST">
+                    {% csrf_token %}
+                    <button class="heart-icon" type="submit" name="article_id" value="{{id}}" ></button>
+                </form>
+            </div>
 
-            <form action="{% url 'like_article' category id %}" method="POST">
-                {% csrf_token %}
-                <button type="submit" name="article_id" value="{{id}}" class="btn btn-primary btn-sm">
-                Нравится</button>
-            </form>
-
-        {{total_likes}}
-
+            <div class="likes-amount">{{total_likes}}</div>
         </div>
 
         <div class="comments_label">
