@@ -1829,6 +1829,8 @@ textarea:focus ~ .place_holder {
 
     .credit_articles_list .post {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .credit_articles_list .all_info {

@@ -29,6 +29,9 @@ def home(request):
         'latest_article_content': latest_article_content,
         'hottest_article': hottest_article,
         'hottest_article_article_content': hottest_article_content,
+        'credit_amount': Articles.objects.filter(category='credit').count() * 10,
+        'debit_amount': Articles.objects.filter(category='debit').count() * 10,
+        'savings_amount': Articles.objects.filter(category='savings').count() * 10,
     }
 
     return render(request, 'main/home.html', context)

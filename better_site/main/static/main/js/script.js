@@ -92,7 +92,7 @@ window.addEventListener('scroll', () => {
                 if(count < target) {
                     count++;
                     counter.innerText = count;
-                    setTimeout(updateCount, 5);
+                    setTimeout(updateCount, 20);
                 } else {
                     counter.innerText = target;
                 }
@@ -132,7 +132,7 @@ window.addEventListener('scroll', () => {
                 if(count_2 < target_2) {
                     count_2++;
                     counter.innerText = count_2;
-                    setTimeout(updateCount_2, 5);
+                    setTimeout(updateCount_2, 20);
                 } else {
                     counter.innerText = target_2;
                 }
@@ -171,7 +171,7 @@ window.addEventListener('scroll', () => {
                 if(count_3 < target_3) {
                     count_3++;
                     counter.innerText = count_3;
-                    setTimeout(updateCount_3, 5);
+                    setTimeout(updateCount_3, 20);
                 } else {
                     counter.innerText = target_3;
                 }
@@ -202,18 +202,3 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
-//for like animation
-
-//const heartIcon = document.querySelector(".like-button .heart-icon");
-//const likesAmountLabel = document.querySelector(".like-button .likes-amount");
-//
-//
-//heartIcon.addEventListener("click", () => {
-//  heartIcon.classList.toggle("liked");
-//  if (heartIcon.classList.contains("liked")) {
-//    likesAmountLabel++;
-//  } else {
-//    likesAmountLabel--;
-//  }
-//
-//});
