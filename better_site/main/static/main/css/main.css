@@ -1465,8 +1465,12 @@ textarea:focus ~ .place_holder {
 /*    background-color: blueviolet;*/
 }
 
-.like-button .heart-icon:hover {
+.like-button .heart-icon.liked{
   animation: like-anim 0.7s steps(28) forwards;
+}
+
+.like_status {
+    display: none;
 }
 
 @keyframes like-anim {

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from main.models import Articles
 from .forms import CommentForm
 from django.urls import reverse
@@ -28,8 +28,8 @@ def article_detail(request, id, category):
     return render(request, 'article_detail/article_detail.html', {'article': article, 'id': id, 'category': category, 'form': CommentForm,
                                                                   'user': user, 'total_likes': total_likes, 'liked': liked, })
 def like_article(request, id, category):
-    post = get_object_or_404(Articles, id=request.POST.get('article_id'))
-
+    post = get_object_or_404(Articles, id=id)
+    id = id
     liked = False
     if post.likes.filter(id=request.user.id).exists():
         post.likes.remove(request.user)
@@ -38,6 +38,14 @@ def like_article(request, id, category):
         post.likes.add(request.user)
         liked = True
 
+    data = {
+        'value': liked,
+        'likes': post.likes.count(),
+        'post-id': id,
+    }
+
+    return JsonResponse(data, safe=False)
 
 
-    return redirect(f'http://127.0.0.1:8000/article/{category}/{id}')
+
+    # return redirect(f'http://127.0.0.1:8000/article/{category}/{id}', {'liked': liked})

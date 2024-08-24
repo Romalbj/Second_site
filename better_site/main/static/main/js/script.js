@@ -202,18 +202,18 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
-//for loke animation
+//for like animation
 
-const heartIcon = document.querySelector(".like-button .heart-icon");
-const likesAmountLabel = document.querySelector(".like-button .likes-amount");
-
-
-heartIcon.addEventListener("click", () => {
-  heartIcon.classList.toggle("liked");
-  if (heartIcon.classList.contains("liked")) {
-    likesAmountLabel++;
-  } else {
-    likesAmountLabel--;
-  }
-
-});
+//const heartIcon = document.querySelector(".like-button .heart-icon");
+//const likesAmountLabel = document.querySelector(".like-button .likes-amount");
+//
+//
+//heartIcon.addEventListener("click", () => {
+//  heartIcon.classList.toggle("liked");
+//  if (heartIcon.classList.contains("liked")) {
+//    likesAmountLabel++;
+//  } else {
+//    likesAmountLabel--;
+//  }
+//
+//});

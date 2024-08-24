@@ -97,6 +97,60 @@
 </body>
 
 <script src="{% static 'main/js/script.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+
+    $( document ).ready(function() {
+
+        $('.like-form').submit(function(e) {
+            e.preventDefault()
+
+            const post_id = $(this).attr('id')
+
+            const url = $(this).attr('action')
+
+            let res;
+            const likes = $(`.likes-amount`).text()
+            const trimcount = parseInt(likes)
+
+            const like_status = $(`.like_status`).text()
+
+            const heartIcon = document.querySelector(".heart-icon");
+
+
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: {
+                    'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val(),
+                    'post_id': post_id,
+                },
+                success: function(response){
+                    console.log('success', response)
+
+
+                    if(like_status === 'True') {
+                        $(`.like_status`).text('False')
+                        res = trimcount - 1
+                        heartIcon.classList.remove("liked")
+                    } else {
+                        $(`.like_status`).text('True')
+                        res = trimcount + 1
+                        heartIcon.classList.add("liked")
+                    }
+                    $(`.likes-amount`).text(res)
+                },
+                error: function(response){
+                    console.log('error', response)
+                },
+
+            });
+
+        });
+    });
+
+</script>
 
 
 </html>

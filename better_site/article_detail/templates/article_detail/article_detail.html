@@ -38,13 +38,18 @@
 
         <div class="like-button">
             <div class="heart-bg">
-                <form action="{% url 'like_article' category id %}" method="POST">
+                <form class="like-form" id="{{id}}" action="{% url 'like_article' category id %}" method="POST">
                     {% csrf_token %}
-                    <button class="heart-icon" type="submit" name="article_id" value="{{id}}" ></button>
+                    {% if user in article.likes.all %}
+                    <button class="heart-icon {{id}} liked" type="submit" name="article_id" ></button>
+                    {% else %}
+                    <button class="heart-icon {{id}}" type="submit" name="article_id" ></button>
+                    {% endif %}
+
                 </form>
             </div>
-
             <div class="likes-amount">{{total_likes}}</div>
+            <div class="like_status">{{liked}}</div>
         </div>
 
         <div class="comments_label">
