@@ -77,5 +77,6 @@ def log_in(request, id, category):
 
 def logout_user(request):
     logout(request)
-    return redirect('http://127.0.0.1:8000/home')
+    redirect_to = request.GET.get('next',)
+    return redirect(redirect_to)
 

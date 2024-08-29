@@ -73,7 +73,7 @@
                                         <a href="#">Зарегистрироваться</a>
                                     {% else %}
                                         <a href="#">Профиль</a>
-                                        <a href="{% url 'logout' %}">Выйти</a>
+                                        <a href="{% url 'logout' %}?next={{ request.path }}">Выйти</a>
                                     {% endif %}
                                 </div>
                             </div>

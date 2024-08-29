@@ -88,7 +88,7 @@
         </div>
     </div>
 
-    {% if not user %}
+    {% if not user.is_authenticated  %}
         <div class="login_button">
             <a href="{% url 'login' category=category id=id %}">Войти, чтобы оставить комментарий</a>
         </div>
