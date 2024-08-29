@@ -75,3 +75,7 @@ def log_in(request, id, category):
 
     return render(request, 'accounts/login.html', {'id': id, 'category': category})
 
+def logout_user(request):
+    logout(request)
+    return redirect('http://127.0.0.1:8000/home')
+

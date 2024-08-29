@@ -1491,6 +1491,7 @@ textarea:focus ~ .place_holder {
     flex-direction: column;
     align-items: flex-end;
     z-index: 1;
+    width: 50px;
 }
 
 .dropdown-content .links {
@@ -1503,7 +1504,7 @@ textarea:focus ~ .place_holder {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 4rem;
+    top: 3.6rem;
     background-color: white;
 /*    backdrop-filter: blur(150px);*/
     border-radius: 15px;
@@ -1551,6 +1552,11 @@ textarea:focus ~ .place_holder {
     transition: .2s;
     color:rgba(0,0,0, 0.3);
     font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+/*    background-color: red;*/
+    width: 100%;
 }
 
 .dropdown-content:hover i{

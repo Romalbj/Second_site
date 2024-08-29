@@ -68,12 +68,12 @@
                             <div class="dropdown-content">
                                 <div class="profile"><i class="fa-regular fa-circle-user" ></i></div>
                                 <div class="links">
-                                    {% if not user %}
+                                    {% if not user.is_authenticated %}
                                         <a href="#">Войти</a>
                                         <a href="#">Зарегистрироваться</a>
                                     {% else %}
                                         <a href="#">Профиль</a>
-                                        <a href="#">Выйти</a>
+                                        <a href="{% url 'logout' %}">Выйти</a>
                                     {% endif %}
                                 </div>
                             </div>
