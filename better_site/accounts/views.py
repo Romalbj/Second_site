@@ -7,9 +7,12 @@ from django.contrib.auth import authenticate, login, logout
 import ast
 
 
-def sign_up(request, id, category):
+def sign_up(request):
+    global redirect_to
+
     if request.method == "POST":
         form = CreateUserForm(request.POST)
+
         if form.is_valid():
             form.save()
 
@@ -18,7 +21,7 @@ def sign_up(request, id, category):
 
             user = authenticate(request, username=username, password=password)
             login(request, user)
-            return redirect(f'http://127.0.0.1:8000/article/{category}/{id}')
+            return redirect(redirect_to)
 
         else:
             errors = str(form.errors.as_data)
@@ -52,11 +55,14 @@ def sign_up(request, id, category):
 
     else:
         form = CreateUserForm()
+        redirect_to = request.GET.get('next', )
 
-    return render(request, 'accounts/sign_up.html', {'form': form, 'id': id, 'category': category})
+
+    return render(request, 'accounts/sign_up.html', {'form': form, 'next': redirect_to})
 
 
-def log_in(request, id, category):
+def log_in(request):
+    global redirect_to
 
     if request.method == "POST":
 
@@ -67,13 +73,14 @@ def log_in(request, id, category):
 
         if user is not None:
             login(request, user)
-            return redirect(f'http://127.0.0.1:8000/article/{category}/{id}')
+            # return HttpResponse(redirect_to)
+            return redirect(redirect_to)
 
         else:
             messages.info(request, "Неверное имя пользователя или пароль")
 
-
-    return render(request, 'accounts/login.html', {'id': id, 'category': category})
+    redirect_to = request.GET.get('next', )
+    return render(request, 'accounts/login.html', {'next': redirect_to,})
 
 def logout_user(request):
     logout(request)

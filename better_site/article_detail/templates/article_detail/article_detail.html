@@ -90,12 +90,12 @@
 
     {% if not user.is_authenticated  %}
         <div class="login_button">
-            <a href="{% url 'login' category=category id=id %}">Войти, чтобы оставить комментарий</a>
+            <a href="{% url 'login' %}?next={{ request.path }}">Войти, чтобы оставить комментарий</a>
         </div>
     {% endif %}
 
 <!--    <div class="login_button">-->
-<!--        <a href="{% url 'login' category=category id=id %}">Войти, чтобы оставить комментарий</a>-->
+<!--        <a href="{% url 'login' %}">Войти, чтобы оставить комментарий</a>-->
 <!--    </div>-->
 
 <!--{{user}}-->
