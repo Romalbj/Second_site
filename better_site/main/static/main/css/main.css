@@ -1704,15 +1704,6 @@ textarea:focus ~ .place_holder {
         height: 350px;
     }
 
-    .dropdown-content .links {
-        transform: translateY(-0px);
-        transition: .4s;
-    }
-
-    .dropdown-content:hover .links {
-        transform: translateY(-170px);
-    }
-
     .profile {
         color:rgba(0,0,0, 1);
         font-size: 1.5rem;
