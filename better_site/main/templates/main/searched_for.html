@@ -5,6 +5,14 @@
 
 {% block content %}
 
+<form action="{% url 'searched_for' %}" method="POST" style="margin-top: 10vh;">
+    {% csrf_token %}
+
+    <input type="search" placeholder="Искать" name="searched">
+    <button type="submit">Искать</button>
+</form>
+
+
     {% if searched %}
     <h1>вы искали {{ searched }}</h1>
     <div class="credit_articles_list">
@@ -30,6 +38,9 @@
 
 
     </div>
+
+
+    {{post_ids}}
     {% endif %}
 
 

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Articles
 from article_detail.models import Comment
+from django.db.models import Case, When
 def home(request):
 
     latest_article = Articles.objects.latest('time_create')
@@ -57,8 +58,29 @@ def savings(request):
 def search(request):
 
     if request.method == 'POST':
+
         searched = request.POST['searched']
-        articles = Articles.objects.filter(title__contains=searched)
-        return render(request, 'main/searched_for.html', {'searched': searched, 'articles': articles})
+
+        searched_no_register = searched.lower().split()
+
+        res = []
+        count = 0
+        for post in Articles.objects.all():
+            title = post.title.lower()
+            count = 0
+            for word in searched_no_register:
+                if word in title:
+                    count += 1
+                if count == len(searched_no_register):
+                    res.append(post.id)
+
+
+        # articles = Articles.objects.filter(title__contains=searched)
+        # articles = Articles.objects.filter(id=res)
+
+        preserved = Case(*[When(pk=pk, then=pos) for pos, pk in enumerate(res)])
+        queryset = Articles.objects.filter(pk__in=res).order_by(preserved)
+
+        return render(request, 'main/searched_for.html', {'searched': searched, 'articles': queryset, 'post_ids': res})
     else:
         return render(request, 'main/searched_for.html')
