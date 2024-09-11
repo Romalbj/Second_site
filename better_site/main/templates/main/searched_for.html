@@ -1,20 +1,24 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}searched-for{% endblock %}
+{% block title %}searched{% endblock %}
 
 
 {% block content %}
+    <div class="search_form_container">
+        <form class="search_form" action="{% url 'searched_for' %}" method="POST">
+            {% csrf_token %}
 
-<form action="{% url 'searched_for' %}" method="POST" style="margin-top: 10vh;">
-    {% csrf_token %}
-
-    <input type="search" placeholder="Искать" name="searched">
-    <button type="submit">Искать</button>
-</form>
+            <input class="search_input" type="search" placeholder="Искать" name="searched">
+            <button class="search_button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
 
 
     {% if searched %}
-    <h1>вы искали {{ searched }}</h1>
+    <div class="searched_for">
+        <p>Результаты по запросу: <span>{{ searched }}</span> </p>
+    </div>
+
     <div class="credit_articles_list">
 
          <ul>
@@ -40,7 +44,7 @@
     </div>
 
 
-    {{post_ids}}
+<!--    {{post_ids}}-->
     {% endif %}
 
 
