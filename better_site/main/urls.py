@@ -9,5 +9,6 @@ urlpatterns = [
     path('credit', views.credit, name='credit'),
     path('debit', views.debit, name='debit'),
     path('savings', views.savings, name='savings'),
+    path('searched_for', views.search, name='searched_for'),
     path('article/', include('article_detail.urls'), name='article'),
 ]

@@ -53,3 +53,12 @@ def savings(request):
         'articles': Articles.objects.filter(category='savings').order_by('-time_update'),
     }
     return render(request, 'main/savings.html', context)
+
+def search(request):
+
+    if request.method == 'POST':
+        searched = request.POST['searched']
+        articles = Articles.objects.filter(title__contains=searched)
+        return render(request, 'main/searched_for.html', {'searched': searched, 'articles': articles})
+    else:
+        return render(request, 'main/searched_for.html')

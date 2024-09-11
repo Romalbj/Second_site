@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="form_wrapper">
-    <form class="site_form" action="/account/signup/" method="post">
+    <form class="site_form" action="{% url 'sign_up' %}"  method="post">
         {% csrf_token %}
         <p class="register_label">Регистрация</p>
 
