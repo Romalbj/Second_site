@@ -1669,6 +1669,13 @@ input::placeholder {
     font-weight: 300;
 }
 
+.no_res {
+/*    background-color: red;*/
+    margin: 3vh 0 0 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
 /* for medium devices */
 @media screen and (min-width: 576px) {
 

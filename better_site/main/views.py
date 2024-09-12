@@ -63,15 +63,23 @@ def search(request):
 
         searched_no_register = searched.lower().split()
 
+        request_list = []
+
+        for word in searched_no_register:
+            if len(word) > 4:
+                request_list.append(word[:-2])
+            else:
+                request_list.append(word)
+
         res = []
         count = 0
         for post in Articles.objects.all():
             title = post.title.lower()
             count = 0
-            for word in searched_no_register:
+            for word in request_list:
                 if word in title:
                     count += 1
-                if count == len(searched_no_register):
+                if count == len(request_list):
                     res.append(post.id)
 
 
@@ -81,6 +89,11 @@ def search(request):
         preserved = Case(*[When(pk=pk, then=pos) for pos, pk in enumerate(res)])
         queryset = Articles.objects.filter(pk__in=res).order_by(preserved)
 
-        return render(request, 'main/searched_for.html', {'searched': searched, 'articles': queryset, 'post_ids': res})
+        output = False
+        if len(res) >= 1:
+            output = True
+        else:
+            output = False
+        return render(request, 'main/searched_for.html', {'searched': searched, 'articles': queryset, 'post_ids': res, 'output':output, 'input': request_list,})
     else:
         return render(request, 'main/searched_for.html')

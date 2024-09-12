@@ -13,12 +13,13 @@
         </form>
     </div>
 
+<!--{{input}}-->
 
-    {% if searched %}
     <div class="searched_for">
         <p>Результаты по запросу: <span>{{ searched }}</span> </p>
     </div>
 
+    {% if output %}
     <div class="credit_articles_list">
 
          <ul>
@@ -42,6 +43,8 @@
 
 
     </div>
+    {% else %}
+    <p class="no_res">По запросу ничего не найдено</p>
 
 
 <!--    {{post_ids}}-->
