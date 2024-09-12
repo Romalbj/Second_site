@@ -918,7 +918,7 @@ nav {
     margin: 12vh 0 0 0;
     padding: 0;
     height: 65vh;
-    width: 80vw;
+    width: 70vw;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1006,7 +1006,7 @@ nav {
 .div_title_detail {
     margin: 2vh 0;
     padding: 0 0 2vh 0;
-    width: 80vw;
+    width: 70vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1122,6 +1122,15 @@ form input:focus {
     outline: none;
 /*    border-bottom-color:  #ff007d;*/
 /*    box-shadow: inset 0px 0px 2px 2px #ff007d;*/
+}
+
+form input::placeholder {
+    transition: .25s;
+}
+
+form input:focus::placeholder {
+    transform: translateY(-20px);
+    opacity: 0;
 }
 
 .input i {
@@ -1592,10 +1601,11 @@ textarea:focus ~ .place_holder {
     flex-direction: row;
 /*    row-gap: 3vh;*/
     position: relative;
+    position: relative;
 }
 
 .search_form_container button {
-    background-color: #fcd8e2;
+    background-color: #ff007da6;
     color: white;
     height: 48px;
     padding: 0.5% 2%;
