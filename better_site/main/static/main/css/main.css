@@ -1036,7 +1036,7 @@ nav {
 .site_form {
     background-color: rgba(255,255,255, 0.8);
     width: 470px;
-    height: 520px;
+    height: 550px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1092,6 +1092,11 @@ nav {
     align-items: center;
     justify-content: flex-start;
 /*    border-bottom: 2px solid rgba(0,0,0,0.55);*/
+    border: 2px solid #fcd8e2;
+    border-radius: 40px;
+/*    padding-left: 2vh;*/
+/*    height: 50px;*/
+/*    width: 40vw;*/
 }
 
 
@@ -1109,13 +1114,13 @@ input {
     width: 85%;
     height: 6vh;
     border-color: transparent;
-    border-bottom: 1px solid rgba(0,0,0, 0.3);
+/*    border-bottom: 1px solid rgba(0,0,0, 0.3);*/
     background-color: transparent;
 }
 
 form input:focus {
     outline: none;
-    border-bottom-color:  #ff007d;
+/*    border-bottom-color:  #ff007d;*/
 /*    box-shadow: inset 0px 0px 2px 2px #ff007d;*/
 }
 
@@ -1805,7 +1810,7 @@ input::placeholder {
 
     .site_form {
         width: 430px;
-        height: 470px;
+        height: 550px;
     }
 
     .site_form_login{
@@ -1913,7 +1918,7 @@ input::placeholder {
 
     .site_form {
         width: 70vw;
-        height: 420px;
+        height: 470px;
     }
 
     .site_form_login{
