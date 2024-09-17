@@ -5,6 +5,14 @@
 
 
 {% block content %}
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <p>{{ message }}&nbsp;&nbsp;&nbsp;<i class="fa-regular fa-circle-check"></i></p>
+            {% endfor %}
+        </div>
+        {% endif %}
+
     <div class="detail_card" style="background-image: url('{{article.photo.url}}');">
 <!--        <p class="detail_title">{{article.title}}</p>-->
     </div>

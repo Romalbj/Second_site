@@ -4,6 +4,14 @@
 
 
 {% block content %}
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <p>{{ message }}&nbsp;&nbsp;&nbsp;<i class="fa-regular fa-circle-check"></i></p>
+            {% endfor %}
+        </div>
+        {% endif %}
+
     <div class="search_form_container">
         <form class="search_form" action="{% url 'searched_for' %}" method="POST">
             {% csrf_token %}
