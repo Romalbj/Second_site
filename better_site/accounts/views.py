@@ -1,7 +1,8 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
-from .forms import CreateUserForm
+from .forms import CreateUserForm, UpdateProfileForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 import ast
@@ -87,3 +88,22 @@ def logout_user(request):
     redirect_to = request.GET.get('next',)
     return redirect(redirect_to)
 
+
+def update_profile(request):
+    global redirect_to
+
+    if request.user.is_authenticated:
+        user = User.objects.get(id=request.user.id)
+        form = UpdateProfileForm(request.POST or None, instance=user)
+
+        if form.is_valid():
+            form.save()
+            login(request, user)
+            messages.success(request, "Профиль изменен")
+            return redirect(redirect_to)
+    # else:
+    #     messages.success(request, "Чтобы изменить профиль, нужно войти в аккаунт")
+    #     return redirect(redirect_to)
+
+    redirect_to = request.GET.get('next', )
+    return render(request, 'accounts/update_profile.html', {'next': redirect_to, 'form': form,})

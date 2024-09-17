@@ -1036,7 +1036,7 @@ nav {
 .site_form {
     background-color: rgba(255,255,255, 0.8);
     width: 470px;
-    height: 550px;
+    height: 570px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1202,7 +1202,7 @@ form input:focus::placeholder {
 
 .site_form_login{
     width: 420px;
-    height: 380px;
+    height: 400px;
 }
 
 
@@ -1691,6 +1691,58 @@ input::placeholder {
     font-weight: 700;
 }
 
+.update_profile_form_container {
+    border: 2px solid red;
+/*    background-color: greenyellow;*/
+    height: 70vh;
+    width: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.update_profile_form_container  form {
+/*    background-color: cornflowerblue;*/
+    width: 100%;
+    height: 100%;
+}
+
+.messages {
+    background-color: rgba(0, 0, 0, 0.07);
+    backdrop-filter: blur(7px);
+    width: 100vw;
+    color: #ff007d;
+    height: 100vh;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 0vh;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+/*    transform: translateY(100px);*/
+    transition-delay: 1s;
+}
+
+
+.messages p {
+    background-color: white;
+    box-shadow: 5px 5px 25px 5px rgba(0,0,0,0.17);
+/*    border: 1px solid #ff007d;*/
+    border-radius: 30px;
+    margin: 0;
+    padding: 0;
+    height: 15%;
+    width: 35%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* for medium devices */
 @media screen and (min-width: 576px) {
 
@@ -1825,7 +1877,7 @@ input::placeholder {
 
     .site_form_login{
         width: 400px;
-        height: 350px;
+        height: 370px;
     }
 
     .profile {
@@ -1933,7 +1985,7 @@ input::placeholder {
 
     .site_form_login{
         width: 350px;
-        height: 300px;
+        height: 320px;
     }
 
     input {
@@ -2003,12 +2055,18 @@ input::placeholder {
 
     .site_form {
         width: 280px;
-        height: 330px;
+        height: 360px;
     }
 
     .site_form_login{
         width: 270px;
-        height: 250px;
+        height: 280px;
+    }
+
+    .error_message {
+        font-size: 0.7rem;
+/*        background-color: red;*/
+        margin-bottom: 1vh;
     }
 
     input {

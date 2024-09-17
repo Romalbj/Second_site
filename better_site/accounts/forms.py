@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django import forms
 from django.contrib.auth.models import User
 
@@ -6,7 +6,7 @@ class CreateUserForm(UserCreationForm):
 
     username = forms.CharField(max_length=100,
                            widget= forms.TextInput
-                           (attrs={'placeholder':' Имя пользователя'}))
+                           (attrs={'placeholder':'Имя пользователя'}))
 
     email = forms.CharField(max_length=100,
                            widget= forms.TextInput
@@ -26,3 +26,16 @@ class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
+
+class UpdateProfileForm(UserChangeForm):
+
+    username = forms.CharField(max_length=100,
+                           widget= forms.TextInput
+                           (attrs={'placeholder':'Имя пользователя'}))
+
+    email = forms.CharField(max_length=100,
+                           widget= forms.TextInput
+                           (attrs={'placeholder':'Почта'}))
+    class Meta:
+        model = User
+        fields = ['username', 'email',]

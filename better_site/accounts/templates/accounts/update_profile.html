@@ -1,0 +1,36 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Article{% endblock %}
+
+
+{% block content %}
+
+    <div class="update_profile_form_container">
+        <form class="update_profile_form" method="POST" action="{% url 'profile' %}">
+            {% csrf_token %}
+            <p class="register_label">Профиль</p>
+
+            <div class="form">
+                <div class="input name">
+                    <div class="field"><i class="fa-solid fa-circle-user"></i>{{form.username}}</div>
+                </div>
+
+                <div class="input email">
+                    <div class="field"><i class="fa-solid fa-envelope"></i>{{form.email}}</div>
+                </div>
+
+
+                <input class="confirm" type="submit" value="Подтвердить">
+
+<!--            {{form.username}}-->
+<!--            {{form.email}}-->
+<!--            {{form.password1}}-->
+<!--            {{form.password2}}-->
+
+
+        </form>
+    </div>
+
+
+
+{% endblock %}

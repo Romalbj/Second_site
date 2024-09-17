@@ -26,9 +26,9 @@
 
            <input class="confirm" type="submit" value="Войти">
 
-            {% for message in messages %}
-                <p class="error_message">{{message}}</p>
-            {% endfor %}
+<!--            {% for message in messages %}-->
+<!--                <p class="error_message">{{message}}</p>-->
+<!--            {% endfor %}-->
 
             <div class="to_login">
                 <p>Не зарегестрированы?&nbsp;<a href="{% url 'sign_up' %}?next={{ next }}">Регистрация</a></p>

@@ -78,7 +78,7 @@
                                         <a href="{% url 'login' %}?next={{ request.path }}">Войти</a>
                                         <a href="{% url 'sign_up' %}?next={{ request.path }}">Зарегистрироваться</a>
                                     {% else %}
-                                        <a href="#">Профиль</a>
+                                        <a href="{% url 'profile' %}?next={{ request.path }}">Профиль</a>
                                         <a href="{% url 'logout' %}?next={{ request.path }}">Выйти</a>
                                     {% endif %}
                                 </div>
@@ -92,6 +92,13 @@
 
 
     <main>
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
         {% block content %}
         {% endblock %}
     </main>
@@ -119,6 +126,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <script>
+
+
+setTimeout(fade_out, 1500);
+    function fade_out() {
+        $(".messages").fadeOut(50, "linear").empty();
+    }
 
 let profile_icon = document.querySelector('.profile');
 let links =  document.querySelector('.dropdown-content .links');
