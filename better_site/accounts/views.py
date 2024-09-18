@@ -99,7 +99,7 @@ def update_profile(request):
         if form.is_valid():
             form.save()
             login(request, user)
-            messages.success(request, "Профиль изменен")
+            messages.success(request, "Данные профиля изменены")
             return redirect(redirect_to)
     # else:
     #     messages.success(request, "Чтобы изменить профиль, нужно войти в аккаунт")
