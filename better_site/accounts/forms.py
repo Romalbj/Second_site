@@ -31,11 +31,13 @@ class UpdateProfileForm(UserChangeForm):
 
     username = forms.CharField(max_length=100,
                            widget= forms.TextInput
-                           (attrs={'placeholder':'Имя пользователя'}))
+                           (attrs={'placeholder':'Имя пользователя',
+                                   'class': 'username_field'}))
 
     email = forms.CharField(max_length=100,
                            widget= forms.TextInput
-                           (attrs={'placeholder':'Почта'}))
+                           (attrs={'placeholder':'Почта',
+                                   'class': 'email_field'}))
     class Meta:
         model = User
         fields = ['username', 'email',]

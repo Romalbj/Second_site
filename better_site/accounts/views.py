@@ -95,6 +95,8 @@ def update_profile(request):
     if request.user.is_authenticated:
         user = User.objects.get(id=request.user.id)
         form = UpdateProfileForm(request.POST or None, instance=user)
+        len_email = len(user.email)
+        password = str('𒊹'*len_email)
 
         if form.is_valid():
             form.save()
@@ -106,4 +108,4 @@ def update_profile(request):
     #     return redirect(redirect_to)
 
     redirect_to = request.GET.get('next', )
-    return render(request, 'accounts/update_profile.html', {'next': redirect_to, 'form': form,})
+    return render(request, 'accounts/update_profile.html', {'next': redirect_to, 'form': form, 'username': user.username, 'password': password,})

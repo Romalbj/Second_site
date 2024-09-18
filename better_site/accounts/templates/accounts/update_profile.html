@@ -6,29 +6,31 @@
 {% block content %}
 
     <div class="update_profile_form_container">
+        <i class="fa-regular fa-circle-user user_logo"></i>
         <form class="update_profile_form" method="POST" action="{% url 'profile' %}">
             {% csrf_token %}
-            <p class="register_label">Профиль</p>
+            <p class="register_label">Пользователь&nbsp;&nbsp; <button type="button" class="pencil_button"><i class="fa-solid fa-pencil pencil"></i></button></p>
 
             <div class="form">
                 <div class="input name">
-                    <div class="field"><i class="fa-solid fa-circle-user"></i>{{form.username}}</div>
+                    <div class="field">{{form.username}}</div>
                 </div>
 
                 <div class="input email">
-                    <div class="field"><i class="fa-solid fa-envelope"></i>{{form.email}}</div>
+                    <div class="field">{{form.email}}</div>
                 </div>
 
+<!--                <div class="input password">-->
+<!--                    <div class="field" style="font-size: 0.75rem">{{password}}</div>-->
+<!--                </div>-->
 
-                <input class="confirm" type="submit" value="Подтвердить">
 
-<!--            {{form.username}}-->
-<!--            {{form.email}}-->
-<!--            {{form.password1}}-->
-<!--            {{form.password2}}-->
+                <input class="confirm_button" type="submit" value="Сохранить">
+
 
 
         </form>
+
     </div>
 
 

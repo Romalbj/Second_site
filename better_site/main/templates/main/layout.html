@@ -129,9 +129,10 @@
 
 
 setTimeout(fade_out, 1200);
-    function fade_out() {
-        $(".messages").fadeOut(50, "linear").empty();
-    }
+function fade_out() {
+    $(".messages").fadeOut(50, "linear").empty();
+};
+
 
 let profile_icon = document.querySelector('.profile');
 let links =  document.querySelector('.dropdown-content .links');
@@ -139,10 +140,42 @@ profile_icon.addEventListener('click', () => {
     if (links.className.includes('links_active')) {
         links.classList.remove("links_active")
     }
-    else {links.classList.add("links_active")}
-    console.log('good')
+    else {
+        links.classList.add("links_active") }
+//    console.log('good')
 });
 
+let pencil = document.querySelector('.update_profile_form_container .pencil');
+let inputFields = document.querySelectorAll('.update_profile_form_container .field input');
+//let password = document.querySelectorAll('.update_profile_form_container .password');
+let change_profile_button = document.querySelector('.update_profile_form_container .confirm_button');
+//password.style.color = 'black'
+pencil.addEventListener('click', () => {
+
+    if (pencil.className.includes('active')) {
+        pencil.classList.remove("active")
+//        change_profile_button.style.display = 'none'
+        change_profile_button.style.opacity = '0'
+        change_profile_button.style.transform = 'translateY(-20px)'
+        inputFields.forEach (field => {
+            field.style.pointerEvents = 'none';
+            field.classList.remove("active");
+
+    });
+    }
+    else {
+        pencil.classList.add("active")
+//        change_profile_button.style.display = 'block'
+        change_profile_button.style.opacity = '1'
+        change_profile_button.style.transform = 'translateY(0)'
+        inputFields.forEach (field => {
+            field.classList.add("active");
+            field.style.pointerEvents = 'auto';
+    });
+
+    };
+
+});
 
     $( document ).ready(function() {
 
