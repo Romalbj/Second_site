@@ -1863,14 +1863,19 @@ input::placeholder {
 /*    border: 1px solid #ff007d;*/
     border-radius: 30px;
     margin: 0;
-    padding: 3%;
-    height: 17%;
-    width: 37%;
+    padding: 3% 5%;
+/*    height: 17%;*/
+/*    width: 37%;*/
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.messages p i {
+/*    background-color: red;*/
+    margin-top: 1vh;
 }
 
 /* for medium devices */
