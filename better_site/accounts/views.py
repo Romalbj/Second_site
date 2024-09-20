@@ -103,9 +103,9 @@ def update_profile(request):
             login(request, user)
             messages.success(request, "Данные профиля изменены")
             return redirect(redirect_to)
-    # else:
-    #     messages.success(request, "Чтобы изменить профиль, нужно войти в аккаунт")
-    #     return redirect(redirect_to)
+    else:
+        # messages.success(request, "Чтобы изменить профиль, нужно войти в аккаунт")
+        return redirect(redirect_to)
 
     redirect_to = request.GET.get('next', )
     return render(request, 'accounts/update_profile.html', {'next': redirect_to, 'form': form, 'username': user.username, 'password': password,})
