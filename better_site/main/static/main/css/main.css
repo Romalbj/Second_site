@@ -394,21 +394,27 @@ nav {
 }
 
 .article:hover{
-    transform: scale(1.1);
+/*    transform: scale(1.1);*/
+    transform: translateY(-35px);
+}
+
+.article:hover p{
+    transform: translateY(45px);
 }
 
 .article p {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: rgba(140, 31, 75, 0.8);
-    backdrop-filter: blur(80px);
+    background-color: rgba(140, 31, 75, 1);
+/*    backdrop-filter: blur(80px);*/
     font-size: 1.25rem;
     display: flex;
     align-items: center;
     min-height: 50%;
-    padding: 5% 3%;
+    padding: 5% 3% 5% 8%;
     margin:  0;
     color: white;
+    transition: .3s;
 }
 
 .info {
@@ -580,16 +586,17 @@ nav {
     transition: .3s;
 }
 
-/*.credit ul li a div {*/
-/*    background-color: red;*/
-/*    min-height: 50%;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
 
 .credit ul li:hover {
-    transform: scale(1.05);
+/*    transform: scale(1.05);*/
+    transform: translateY(-25px);
 }
+
+.credit ul li:hover p {
+/*    transform: scale(1.01);*/
+    transform: translateY(35px);
+}
+
 .credit ul li:first-child:hover {
     transform: none;
 }
@@ -600,14 +607,14 @@ nav {
 
 .credit p {
     margin: 0;
-    padding: 3% 7% 5% 7%;
+    padding: 3% 7% 5% 10%;
     font-size: 1.1rem;
     text-align: left;
     min-width: 100%;
     min-height: 15vh;
-    background-color: rgba(140, 31, 75, 0.8);
+    background-color: rgba(140, 31, 75, 1);
     color: white;
-    backdrop-filter: blur(80px);
+/*    backdrop-filter: blur(80px);*/
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     transition: .4s;
@@ -618,6 +625,8 @@ nav {
     position: relative;
     letter-spacing: 0.3px;
     line-height: 30px;
+/*    transform: scale(1.01);*/
+    transition: .3s;
 }
 
 .black {
@@ -629,8 +638,7 @@ nav {
 }
 
 .credit_black p {
-    background-color: rgba(140, 31, 75, 0.8);
-    backdrop-filter: blur(80px);
+    background-color: rgba(140, 31, 75, 1);
     min-width: 100%;
 }
 
@@ -964,10 +972,10 @@ nav {
 }
 
 .article_info {
-    width: 80vw;
+    width: 70vw;
     height: 20%;
     margin: 0;
-    padding: 0 1%;
+    padding: 0;
 /*    background-color: #d72828;*/
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -1845,6 +1853,10 @@ input::placeholder {
 .update_profile_form_container .field input {
     color: rgba(0, 0, 0, 0.3);
 /*    background-color: greenyellow;*/
+}
+
+.update_profile_form_container .field input:focus {
+    color: rgba(0, 0, 0, 1);
 }
 
 .update_profile_form_container .name .username_field {
