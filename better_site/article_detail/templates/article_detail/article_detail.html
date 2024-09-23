@@ -21,19 +21,23 @@
 
     <div class="article_info">
             <p>
-                <span><i class="fa-regular fa-calendar"></i>&nbsp;Опубликовано </span>
+<!--                <i class="fa-regular fa-calendar"></i>-->
+                <span>Опубликовано </span>
                 <span>{{article.time_create|date}}</span>
             </p>
             <p>
-                <span><i class="fa-regular fa-calendar"></i>&nbsp;Обновлено</span>
+<!--                <i class="fa-regular fa-calendar"></i>-->
+                <span>Обновлено</span>
                 <span>{{article.time_update|date}}</span>
             </p>
             <p>
-                <span><i class="fa-regular fa-comment"></i>&nbsp;Комментариев </span>
+<!--                <i class="fa-regular fa-comment"></i>-->
+                <span>Комментариев </span>
                 <span>{{article.comments.all.count}}</span>
             </p>
             <p>
-                <span><i class="fa-regular fa-heart"></i>&nbsp;Лайков</span>
+<!--                <i class="fa-regular fa-heart"></i>-->
+                <span>Лайков</span>
                 <span>{{total_likes}}</span>
             </p>
     </div>

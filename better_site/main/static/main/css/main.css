@@ -373,7 +373,7 @@ nav {
 
 .list_articles ul li a {
     width: 30vw;
-    height: 17vw;
+    height: 22vw;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.7);
 }
@@ -382,10 +382,10 @@ nav {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: center;
     margin: 0;
-    padding: 0 2%;
+    padding: 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -398,11 +398,17 @@ nav {
 }
 
 .article p {
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(17px);
-    padding: 5%;
-    margin: 2% 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(140, 31, 75, 0.8);
+    backdrop-filter: blur(80px);
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    min-height: 50%;
+    padding: 5% 3%;
+    margin:  0;
+    color: white;
 }
 
 .info {
@@ -538,12 +544,13 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     column-gap: 1vw;
     row-gap: 3vw;
-    /*background-color: greenyellow;*/
+/*    background-color: greenyellow;*/
 
 }
 
 .credit ul li {
-    padding: 0 2% 2% 2%;
+/*    padding: 0 2% 2% 2%;*/
+    padding: 0;
     margin: 0;
     height: 28vh;
     width: 44vh;
@@ -556,6 +563,8 @@ nav {
     background-size: cover;
     background-position: center center;
     border-radius: 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
     transition: .3s;
 }
 .credit ul li a {
@@ -570,6 +579,13 @@ nav {
     justify-content: center;
     transition: .3s;
 }
+
+/*.credit ul li a div {*/
+/*    background-color: red;*/
+/*    min-height: 50%;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
 
 .credit ul li:hover {
     transform: scale(1.05);
@@ -587,14 +603,21 @@ nav {
     padding: 3% 7% 5% 7%;
     font-size: 1.1rem;
     text-align: left;
-    min-width: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(17px);
-    border-radius: 20px;
+    min-width: 100%;
+    min-height: 15vh;
+    background-color: rgba(140, 31, 75, 0.8);
+    color: white;
+    backdrop-filter: blur(80px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     transition: .4s;
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
     position: relative;
+    letter-spacing: 0.3px;
+    line-height: 30px;
 }
 
 .black {
@@ -606,8 +629,9 @@ nav {
 }
 
 .credit_black p {
-    background-color: rgba(0, 0, 0, 0.15);
-    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(140, 31, 75, 0.8);
+    backdrop-filter: blur(80px);
+    min-width: 100%;
 }
 
 
@@ -943,7 +967,6 @@ nav {
     width: 80vw;
     height: 20%;
     margin: 0;
-    font-size: 1rem;
     padding: 0 1%;
 /*    background-color: #d72828;*/
     display: grid;
@@ -964,9 +987,34 @@ nav {
     padding: 1% 1.5%;
     display: flex;
     align-items: center;
+    position: relative;
     flex-direction: column;
+/*    border-right: 1.5px solid rgba(0, 0, 0, 0.4);*/
 }
 
+.article_info p::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 12px;
+    height: 60%;
+    width: 0.7px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.article_info p:last-child::after {
+    background-color: transparent;
+}
+
+.article_info p span:first-child {
+    font-size: 0.9rem;
+}
+
+.article_info p span:nth-child(2) {
+    font-size: 1.5rem;
+/*    color: #ff007d;*/
+    font-weight: 500;
+}
 
 .article_content {
     width: 70vw;
@@ -1011,7 +1059,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid #ff007d;
+    border-bottom: 0.7px solid rgba(0, 0, 0, 0.4);
 }
 
 .div_title_detail p {
@@ -1555,6 +1603,10 @@ textarea:focus ~ .place_holder {
     float: none;
 }
 
+.dropdown-content .links .username {
+    display: none;
+}
+
 .dropdown-content .links a:last-child {
     border-bottom: none;
 }
@@ -1717,9 +1769,10 @@ input::placeholder {
 }
 
 .update_profile_form_container button {
-    font-size: 1.5rem;
+/*    font-size: 1.5rem;*/
+    font-size: clamp(1.15rem, 0.8137rem + 1.098vw, 1.5rem);
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
     pointer-events: auto;
     cursor: pointer;
     z-index: 100;
@@ -1752,7 +1805,7 @@ input::placeholder {
 /*    background-color: greenyellow;*/
     margin: 0;
     padding: 0 0 0 3vh;
-    height: 15%;
+    max-height: 15%;
     width: fit-content;
     display: flex;
     color: black;
@@ -1791,6 +1844,7 @@ input::placeholder {
 
 .update_profile_form_container .field input {
     color: rgba(0, 0, 0, 0.3);
+/*    background-color: greenyellow;*/
 }
 
 .update_profile_form_container .name .username_field {
@@ -1907,7 +1961,7 @@ input::placeholder {
 @media screen and (max-width: 1116px) {
 
     .recommendations {
-        margin-top: 5vh;
+        margin-top: 15vh;
     }
 
     .credit ul li {
@@ -1935,6 +1989,27 @@ input::placeholder {
 
     .article_info {
         font-size: 0.9rem;
+    }
+
+    .article p {
+        font-size: 1.05rem;
+    }
+
+    .credit ul li a div {
+/*        background-color: red;*/
+/*        min-height: 50%;*/
+        min-width: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .credit p {
+        margin: 0;
+        padding: 3% 7% 5% 7%;
+        font-size: 1.1rem;
+        text-align: left;
+        min-width: 100%;
+        min-height: 24vh;
     }
 }
 
@@ -2076,7 +2151,7 @@ input::placeholder {
         color: white;
         height: 10%;
         width: 40vw;
-        margin: 0 0 3.5vh 0;
+        margin: 0 0 3vh 0;
         padding: 3%;
         border-radius: 30px;
         display: flex;
@@ -2086,9 +2161,15 @@ input::placeholder {
         transition: .3s;
     }
 
+    .dropdown-content .links .username {
+        display: block;
+    }
 
-    .dropdown-content .links a:nth-child(2) {
-        margin: 10% 0 2vh 0;
+
+    .dropdown-content .links p {
+        color: rgba(0, 0, 0, 0.4);
+        font-size: 1rem;
+        margin: 0 0 6vh 0;
     }
 
 
@@ -2099,8 +2180,25 @@ input::placeholder {
     }
 
 
+    .update_profile_form_container  form .form .input {
+        width: 90%;
+    }
 
+    .update_profile_form_container .name .username_field {
+        font-size: clamp(1.4rem, 0.6924rem + 2.3105vw, 1.8rem);
+    }
 
+    .update_profile_form_container .email .email_field {
+        font-size: clamp(0.9rem, -0.0333rem + 2.1333vw, 1.3rem);
+    }
+    .update_profile_form_container  form p {
+        font-size: clamp(1.6rem, 0.8924rem + 2.3105vw, 2rem);
+    }
+
+    .update_profile_form_container button {
+        font-size: clamp(1.15rem, 0.8137rem + 1.098vw, 1.5rem);
+        bottom: 10px;
+    }
 
 }
 
@@ -2291,11 +2389,13 @@ input::placeholder {
     }
 
     .credit ul li {
-        padding: 0 2% 2% 2%;
+        padding: 0;
         margin: 0;
         height: 15vh;
         width: 40vh;
     }
+
+
 }
 
 
@@ -2304,15 +2404,19 @@ input::placeholder {
     .credit ul {
         display: grid;
         grid-template-columns: 1fr;
-        row-gap: 3vw;
+        row-gap: 5vw;
         padding-right: 0;
         padding-left: 0;
     }
 
     .credit ul li {
         min-height: 40vh;
-        max-width: 65vh;
-        width: 70vh;
+        max-width: 60vh;
+        width: 60vh;
+    }
+
+    .credit ul li p {
+        font-size: 1.35rem;
     }
 
         .credit_articles_list {
@@ -2362,7 +2466,7 @@ input::placeholder {
         font-size: 2rem;
      }
 
-        .credit ul {
+    .credit ul {
             display: grid;
             grid-template-columns: 1fr;
             row-gap: 3vw;
@@ -2373,6 +2477,11 @@ input::placeholder {
     .credit ul li {
         min-height: 30vh;
         max-width: 45vh;
+    }
+
+    .credit ul li p {
+        font-size: 1rem;
+        min-height: 15vh;
     }
 
     .article_content p {
@@ -2414,10 +2523,19 @@ input::placeholder {
         gap: 5%;
     }
 
-    .list_articles ul li a{
+    .list_articles ul li a {
         width: 55vw;
         height: 42vw;
     }
+
+    .list_articles ul li a div p {
+        min-width: 100%;
+        min-height: 55%;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+    }
+
     .info h2, .info p {
         width: 80vw;
         text-align: center;
@@ -2427,6 +2545,10 @@ input::placeholder {
 
     .article_info {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .update_profile_form_container  form .form .input {
+        margin: 0 0 0 0;
     }
 }
 
