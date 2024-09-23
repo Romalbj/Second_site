@@ -1976,6 +1976,11 @@ input::placeholder {
         margin-top: 15vh;
     }
 
+    .credit ul {
+        column-gap: 3vw;
+        row-gap: 5vw;
+    }
+
     .credit ul li {
         min-height: 45vh;
         max-width: 50vh;
@@ -2397,7 +2402,7 @@ input::placeholder {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
         column-gap: 3vw;
-        row-gap: 3vw;
+        row-gap: 5vw;
     }
 
     .credit ul li {
@@ -2416,14 +2421,14 @@ input::placeholder {
     .credit ul {
         display: grid;
         grid-template-columns: 1fr;
-        row-gap: 5vw;
+        row-gap: 7vw;
         padding-right: 0;
         padding-left: 0;
     }
 
     .credit ul li {
         min-height: 40vh;
-        max-width: 60vh;
+        max-width: 58vh;
         width: 60vh;
     }
 
@@ -2481,14 +2486,14 @@ input::placeholder {
     .credit ul {
             display: grid;
             grid-template-columns: 1fr;
-            row-gap: 3vw;
+            row-gap: 8vw;
             padding-right: 0;
             padding-left: 0;
     }
 
     .credit ul li {
         min-height: 30vh;
-        max-width: 45vh;
+        max-width: 42vh;
     }
 
     .credit ul li p {
