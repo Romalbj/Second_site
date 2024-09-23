@@ -2,11 +2,13 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
-from .forms import CreateUserForm, UpdateProfileForm
-from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
-import ast
+from django.urls import reverse_lazy
 
+from .forms import CreateUserForm, UpdateProfileForm, PasswordChangeForm, ChangingPasswordForm
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
+import ast
+from django.contrib.auth.views import PasswordChangeView
 
 def sign_up(request):
     global redirect_to
@@ -104,8 +106,35 @@ def update_profile(request):
             messages.success(request, "Данные профиля изменены")
             return redirect(redirect_to)
     else:
-        # messages.success(request, "Чтобы изменить профиль, нужно войти в аккаунт")
+        messages.error(request, "Чтобы изменить профиль, нужно войти в аккаунт")
         return redirect(redirect_to)
 
     redirect_to = request.GET.get('next', )
     return render(request, 'accounts/update_profile.html', {'next': redirect_to, 'form': form, 'username': user.username, 'password': password,})
+
+
+def change_password(request):
+    global redirect_to
+
+    if request.method == 'POST':
+        active_user = request.user
+        form = ChangingPasswordForm(user=active_user, data=request.POST)
+
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)
+            # login(request, user)
+            messages.success(request, "Пароль изменен")
+            return redirect(redirect_to)
+
+    redirect_to = request.GET.get('next', )
+    active_user = request.user
+    form = ChangingPasswordForm(user=active_user, data=request.POST)
+    return render(request, 'accounts/change_password.html', {'form': form, 'user': active_user,})
+
+# class ChangePasswordView(PasswordChangeView):
+#     form_class = ChangingPasswordForm
+#     success_url = reverse_lazy('home')
+#     template_name = 'accounts/change_password.html'
+
+

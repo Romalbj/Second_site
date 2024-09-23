@@ -79,6 +79,7 @@
                                         <a href="{% url 'sign_up' %}?next={{ request.path }}">Зарегистрироваться</a>
                                     {% else %}
                                         <a href="{% url 'profile' %}?next={{ request.path }}">Профиль</a>
+                                        <a href="{% url 'change_password' %}?next={{ request.path }}">Безопасность</a>
                                         <a href="{% url 'logout' %}?next={{ request.path }}">Выйти</a>
                                     {% endif %}
                                 </div>

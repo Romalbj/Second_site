@@ -1878,6 +1878,12 @@ input::placeholder {
     margin-top: 1vh;
 }
 
+.change_password_button {
+    background-color: #ff007d;
+    border-radius: 30px;
+
+}
+
 /* for medium devices */
 @media screen and (min-width: 576px) {
 
