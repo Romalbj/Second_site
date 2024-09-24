@@ -32,7 +32,7 @@
             </p>
             <p>
 <!--                <i class="fa-regular fa-comment"></i>-->
-                <span>Комментариев </span>
+                <span><a href="#comments">Комментариев</a></span>
                 <span>{{article.comments.all.count}}</span>
             </p>
             <p>
@@ -49,7 +49,7 @@
     <div class="comments_container">
 
         <div class="like-button">
-            <div class="heart-bg">
+            <div class="heart-bg" id="comments">
                 <form class="like-form" id="{{id}}" action="{% url 'like_article' category id %}" method="POST">
                     {% csrf_token %}
                     {% if user in article.likes.all %}
