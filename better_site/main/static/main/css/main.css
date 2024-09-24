@@ -390,6 +390,8 @@ nav {
     background-size: cover;
     background-position: center center;
     border-radius: 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
     transition: .3s;
 }
 
