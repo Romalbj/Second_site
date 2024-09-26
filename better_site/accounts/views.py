@@ -77,7 +77,10 @@ def log_in(request):
         if user is not None:
             login(request, user)
             # return HttpResponse(redirect_to)
-            return redirect(redirect_to)
+            if redirect_to:
+                return redirect(redirect_to)
+            else:
+                return redirect('home')
 
         else:
             messages.info(request, "Неверное имя пользователя или пароль")
