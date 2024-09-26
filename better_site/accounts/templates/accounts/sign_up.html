@@ -22,7 +22,7 @@
                 <div class="field">
                     <i class="fa-solid fa-lock"></i>
                     {{form.password1}}
-                    <i class="fa-solid fa-eye-slash eye_icon"></i>
+                    <i class="fa-solid fa-eye-slash eye_icon_1"></i>
                 </div>
             </div>
 
@@ -30,7 +30,7 @@
                 <div class="field">
                     <i class="fa-solid fa-lock"></i>
                     {{form.password2}}
-                    <i class="fa-solid fa-eye-slash eye_icon"></i>
+                    <i class="fa-solid fa-eye-slash eye_icon_2"></i>
                 </div>
             </div>
 
@@ -49,31 +49,59 @@
 </div>
 
 <script>
-    const FormContainer = document.querySelector('.form_wrapper'),
-            EyeIcon = document.querySelectorAll('.eye_icon'),
-            PasswordField = document.querySelectorAll('.password_field');
+const EyeIcon1 = document.querySelector('.eye_icon_1'),
+        PasswordField1 = document.querySelector('.password_field_1');
 
-    console.log(FormContainer, EyeIcon, PasswordField);
-        EyeIcon.forEach(icon =>{
-            console.log('icon_eye'),
-            icon.addEventListener("click", () => {
-                PasswordField.forEach(field => {
-                    if(field.type === "password"){
-                         field.type = "text";
-                        EyeIcon.forEach(icon =>{
-                            icon.classList.replace("fa-eye-slash", "fa-eye");
-                        })
+EyeIcon1.addEventListener('click', () => {
+    if(PasswordField1.type === "password") {
+        PasswordField1.type = "text";
+        EyeIcon1.classList.replace("fa-eye-slash", "fa-eye")}
+    else{
+        PasswordField1.type = "password";
+        EyeIcon1.classList.replace("fa-eye", "fa-eye-slash")
+    }
+})
 
-                    }else{
-                        field.type = "password";
-                        EyeIcon.forEach(icon =>{
-                            icon.classList.replace("fa-eye", "fa-eye-slash");
-                        })
+const EyeIcon2 = document.querySelector('.eye_icon_2'),
+        PasswordField2 = document.querySelector('.password_field_2');
 
-                    }
-                })
-            })
-        })
+EyeIcon2.addEventListener('click', () => {
+    if(PasswordField2.type === "password") {
+        PasswordField2.type = "text";
+        EyeIcon2.classList.replace("fa-eye-slash", "fa-eye")}
+    else{
+        PasswordField2.type = "password";
+        EyeIcon2.classList.replace("fa-eye", "fa-eye-slash")
+    }
+});
+
+
+//
+//    const FormContainer = document.querySelector('.form_wrapper'),
+//            EyeIcon = document.querySelectorAll('.eye_icon'),
+//            PasswordField = document.querySelectorAll('.password_field');
+//
+//    console.log(FormContainer, EyeIcon, PasswordField);
+//        EyeIcon.forEach(icon =>{
+//            console.log('icon_eye'),
+//            icon.addEventListener("click", () => {
+//                PasswordField.forEach(field => {
+//                    if(field.type === "password"){
+//                         field.type = "text";
+//                        EyeIcon.forEach(icon =>{
+//                            icon.classList.replace("fa-eye-slash", "fa-eye");
+//                        })
+//
+//                    }else{
+//                        field.type = "password";
+//                        EyeIcon.forEach(icon =>{
+//                            icon.classList.replace("fa-eye", "fa-eye-slash");
+//                        })
+//
+//                    }
+//                })
+//            })
+//        })
 </script>
 
 

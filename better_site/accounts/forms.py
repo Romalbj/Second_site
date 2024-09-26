@@ -16,13 +16,13 @@ class CreateUserForm(UserCreationForm):
                            widget= forms.TextInput
                            (attrs={'placeholder':'Пароль',
                                    'type': 'password',
-                                   'class': 'password_field'}))
+                                   'class': 'password_field_1'}))
 
     password2 = forms.CharField(max_length=100,
                            widget= forms.TextInput
                            (attrs={'placeholder':'Повторите пароль',
                                    'type': 'password',
-                                   'class': 'password_field'}))
+                                   'class': 'password_field_2'}))
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
@@ -47,16 +47,22 @@ class ChangingPasswordForm(PasswordChangeForm):
     old_password = forms.CharField(max_length=100,
                            widget= forms.TextInput
                            (attrs={'placeholder':'Старый пароль',
+                                   'type': 'password',
+                                   'class': 'password_field_1',
                                   }))
 
     new_password1 = forms.CharField(max_length=100,
                            widget= forms.TextInput
                            (attrs={'placeholder':'Новый пароль',
+                                   'type': 'password',
+                                   'class': 'password_field_2',
                                    }))
 
     new_password2 = forms.CharField(max_length=100,
                            widget= forms.TextInput
                            (attrs={'placeholder':'Повторите новый пароль',
+                                   'type': 'password',
+                                   'class': 'password_field_3',
                                   }))
     class Meta:
         model = User

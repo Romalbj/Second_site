@@ -1984,6 +1984,13 @@ input::placeholder {
     transform: scale(1.05);
 }
 
+
+.eye-icon_1, .eye-icon_2, .eye-icon_3 {
+/*    background-color: red;*/
+    pointer-events: auto;
+    cursor: pointer;
+}
+
 /* for medium devices */
 @media screen and (min-width: 576px) {
 
