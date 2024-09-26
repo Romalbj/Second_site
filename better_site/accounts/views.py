@@ -128,7 +128,35 @@ def change_password(request):
             update_session_auth_hash(request, user)
             # login(request, user)
             messages.success(request, "Пароль изменен")
-            return redirect(redirect_to)
+            if redirect_to:
+                return redirect(redirect_to)
+            else:
+                return redirect('home')
+        else:
+            errors = str(form.errors.as_data)
+            errors = ast.literal_eval('{' + errors.split('{')[1].rstrip('>'))
+
+            res_list = []
+            for k, v in errors.items():
+                res_list.append(str(v).strip('[').strip("]").strip("'"))
+
+            if res_list[0] == 'Your old password was entered incorrectly. Please enter it again.':
+                res_list[0] = 'Старый пароль введен неправильно. Повторите еще раз.'
+
+            if res_list[0] == 'The two password fields didn’t match.':
+                res_list[0] = 'Пароли не совпадают. Повторите еще раз.'
+
+            if 'This password is too short. It must contain at least 8 characters.' in res_list[0] and 'This password is too common' in res_list[0]:
+                res_list[0] = 'Слишком короткий пароль (меньше 8 символов). Слишком простой пароль'
+
+            if 'This password is too short. It must contain at least 8 characters.' in res_list[0] and 'This password is too common' not in res_list[0]:
+                res_list[0] = 'Слишком короткий пароль (меньше 8 символов)'
+
+            if 'This password is too short. It must contain at least 8 characters.'not in res_list[0] and 'This password is too common'  in res_list[0]:
+                res_list[0] = 'Слишком простой пароль'
+
+
+            messages.error(request, res_list[0])
 
     redirect_to = request.GET.get('next', )
     active_user = request.user

@@ -1903,7 +1903,8 @@ input::placeholder {
     background-color: #ff007d;
     color: white;
     margin: 3vh 0 0 0;
-    padding: 0;
+    padding: 7px;
+    height: auto;
     transition: .2s;
     border-color: transparent;
 }
@@ -1991,6 +1992,16 @@ input::placeholder {
     cursor: pointer;
 }
 
+.password_change_message {
+/*    position: absolute;*/
+/*    top: 58vh;*/
+/*    right: 10vh;*/
+    font-size: 1px;
+    color: red;
+    margin: 2vh;
+}
+
+
 /* for medium devices */
 @media screen and (min-width: 576px) {
 
@@ -2068,6 +2079,12 @@ input::placeholder {
         text-align: left;
         min-width: 100%;
         min-height: 24vh;
+    }
+
+    .password_change_message {
+        position: absolute;
+        top: 55vh;
+        left: 25vw;
     }
 }
 
@@ -2608,6 +2625,15 @@ input::placeholder {
     .update_profile_form_container  form .form .input {
         margin: 0 0 0 0;
     }
+
+    .password_change_message {
+        position: absolute;
+        top: 48vh;
+        left: 15vw;
+/*        background-color: red;*/
+        margin-right: 15vw;
+    }
+
 }
 
 @media screen and (max-width: 580px) {
