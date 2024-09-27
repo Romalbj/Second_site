@@ -27,11 +27,34 @@
 
                 <input class="confirm_button" type="submit" value="Сохранить">
 
-
-
         </form>
+            </div>
 
     </div>
+
+    <div class="user_activity_container">
+        <div class="user_activity_contents">
+            <div class="icon_and_title">
+                <i class="fa-solid fa-clock-rotate-left history_icon"></i>
+                <p>Понравившиеся статьи</p>
+            </div>
+            <div class="liked_articles">
+                {% if likes %}
+                <ul>
+                    {% for like in likes %}
+                        <li>
+                            <a href="{% url 'article_detail' category=like.category  id=like.id %}">{{like.title}}</a>
+                             <p><i class="fa-regular fa-comment"></i>&nbsp;&nbsp;{{like.comments.count}}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>Вам пока ничего не понравилось</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
 
 <!--<a href="{% url 'change_password' %}?next={{ request.path }}">Поменять пароль</a>-->
 

@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
+from main.models import Articles
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from django.urls import reverse_lazy
@@ -103,6 +104,8 @@ def update_profile(request):
         len_email = len(user.email)
         password = str('𒊹'*len_email)
 
+        articles = Articles.objects.filter(likes=user)
+
         if form.is_valid():
             form.save()
             login(request, user)
@@ -113,7 +116,10 @@ def update_profile(request):
         return redirect(redirect_to)
 
     redirect_to = request.GET.get('next', )
-    return render(request, 'accounts/update_profile.html', {'next': redirect_to, 'form': form, 'username': user.username, 'password': password,})
+    user = User.objects.get(id=request.user.id)
+    articles = Articles.objects.filter(likes=user)
+    return render(request, 'accounts/update_profile.html', {'next': redirect_to, 'form': form, 'username': user.username,
+                                                            'password': password, 'likes': articles})
 
 
 def change_password(request):
