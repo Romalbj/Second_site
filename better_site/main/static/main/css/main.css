@@ -2436,6 +2436,17 @@ input::placeholder {
         align-items: flex-start;
         padding-top: 20vh;
     }
+
+    .search_form_container {
+        background-color: #ffffff;
+        margin: 12vh 0 0 0;
+        width: 90vw;
+    }
+
+    .search_form_container input {
+        width: 100%;
+    }
+
 }
 
 
@@ -2675,8 +2686,8 @@ input::placeholder {
         font-size: 1.35rem;
     }
 
-        .credit_articles_list {
-        margin: 5vh 0 5vh 0;
+    .credit_articles_list {
+        margin: 0vh 0 5vh 0;
         padding: 5vh 0 0 5vh;
     }
 
@@ -2709,6 +2720,12 @@ input::placeholder {
 
     .credit_articles_list ul li {
         margin: 0 0 1vh 0;
+    }
+
+
+    .credit_articles_list ul li:first-child{
+        margin-top: 0;
+        padding-top: 0;
     }
 
     .dropdown-content .links_active {
