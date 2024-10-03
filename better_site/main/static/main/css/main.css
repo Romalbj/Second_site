@@ -136,9 +136,6 @@ nav {
      display: flex;
 }
 
-.nav_icon {
-    font-size: 1.5rem;
-}
 
 .nav_item {
     height: 100%;
@@ -2159,10 +2156,6 @@ input::placeholder {
         column-gap: 3rem;
     }
 
-    .nav_icon {
-    font-size: 1.5rem;
-    }
-
     .best_article {
         max-width: 50vw;
         max-height: 50vw;
@@ -2435,7 +2428,14 @@ input::placeholder {
         bottom: 70px;
         font-size: 2rem;
     }
+    .user_activity_contents {
+        width: 100%;
+    }
 
+    .form_wrapper {
+        align-items: flex-start;
+        padding-top: 20vh;
+    }
 }
 
 
@@ -2451,6 +2451,10 @@ input::placeholder {
 
     .recommendations {
         margin-top: 0;
+    }
+
+    .article p {
+        font-size: 0.1rem;
     }
 
     .site_form {
@@ -2483,6 +2487,18 @@ input::placeholder {
         font-size: 1.15rem;
     }
 
+    .icon_and_title  p {
+        padding-right: 5vw;
+        line-height: 30px;
+        font-size: 1.6rem;
+/*        background-color: red;*/
+/*        padding-left: 4vh;*/
+    }
+
+    .nav_item i {
+        font-size: 1.8rem;
+    }
+
 }
 
 /* for small devices */
@@ -2491,9 +2507,6 @@ input::placeholder {
         display: none;
     }
 
-    .nav_icon {
-    font-size: 1.5rem;
-    }
 
      .best_articles {
         display: grid;
@@ -2566,6 +2579,13 @@ input::placeholder {
     .to_login {
         margin-top: 0;
         font-size: 0.8rem;
+    }
+
+    .icon_and_title  p {
+        padding-left: 5vw;
+        font-size: 1.5rem;
+/*        background-color: red;*/
+        left: 25%;
     }
 
 }
@@ -2738,6 +2758,11 @@ input::placeholder {
         width: 55vw;
     }
 
+    .liked_articles li a {
+        font-size: 1rem;
+    }
+
+
 }
 
 
@@ -2813,6 +2838,11 @@ input::placeholder {
         transform: translate(-4vw, -75vh);
     }
 
+    .list_articles ul li a div p {
+        font-size: 1.1rem;
+        line-height: 22px;
+    }
+
 }
 
 @media screen and (max-width: 433px) {
@@ -2826,5 +2856,10 @@ input::placeholder {
 /*        width: 75vw;*/
 /*        height: 45vh;*/
 /*    }*/
+
+    .list_articles ul li a {
+        width: 58vw;
+        height: 46vw;
+    }
 
 }
