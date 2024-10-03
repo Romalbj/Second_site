@@ -1049,7 +1049,7 @@ nav {
 }
 
 .article_info p span:nth-child(2) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 /*    color: #ff007d;*/
     font-weight: 500;
 }
@@ -2227,6 +2227,17 @@ input::placeholder {
         position: absolute;
         top: 55vh;
         left: 25vw;
+    }
+}
+
+
+@media screen and (max-width: 920px) {
+    .article_info {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+
+    .article_info p:last-child::after {
+        background-color: rgba(0, 0, 0, 0.4);
     }
 }
 
