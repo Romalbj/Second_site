@@ -6,10 +6,17 @@
 {% block content %}
         {% if messages %}
         <div class="messages">
-            {% for message in messages %}
+            {% if not user.is_authenticated  %}
+                {% for message in messages %}
+                <p style="color: black;">{{ message }}</p>
+                {% endfor %}
+            {% else %}
+                {% for message in messages %}
                 <p style="color: #26b726;">{{ message }}&nbsp;&nbsp;&nbsp;<i class="fa-regular fa-circle-check"></i></p>
-            {% endfor %}
+                {% endfor %}
+            {% endif %}
         </div>
+
         {% endif %}
 
     <div class="best_articles">

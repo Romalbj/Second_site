@@ -2162,6 +2162,118 @@ input::placeholder {
 .liked_articles li p {
     color: rgba(255, 255, 255, 0.6);
 }
+
+.form_email_to_password_reset {
+/*    background-color: red;*/
+    margin: 3vh 0 0 3vw;
+    width: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+/*.password_reset_email {*/
+/*    background-color: greenyellow;*/
+/*}*/
+
+.password_reset_email h3 {
+/*    background-color: blueviolet;*/
+    font-size: clamp(1.2rem, 0.8rem + 1.6vw, 1.8rem);
+    margin: 0 0 5vh 0;
+}
+
+.form_email_to_password_reset label {
+    display: none;
+}
+
+
+.form_email_to_password_reset form p {
+/*    background-color: yellow;*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.form_email_to_password_reset input {
+/*    background-color: green;*/
+    width: 100%;
+    height: 2rem;
+    left: 0;
+    font-size: 1.2rem;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+    margin: 0 0 2vh 0;
+}
+
+.form_email_to_password_reset .submit_email {
+    background-color: #ff007d;
+    color: #fff;
+    padding: 2% 4%;
+    bottom: -60px;
+    left: 0;
+    width: fit-content;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    border-radius: 40px;
+    transition: .3s;
+    border-color: transparent;
+    height: 50px;
+}
+
+
+
+.form_email_to_password_reset .submit_email:hover {
+    background-color: #fcd8e2;
+    border-color: transparent;
+    color: #ff007d;
+/*    padding: 2% 5%;*/
+    box-shadow: inset 0px 0px 0px 2px #ff007d;
+    border: 0px;
+}
+
+.password_reset_done {
+/*    background-color: red;*/
+    margin: 25vh 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 70vw;
+}
+
+.password_reset_done h3 {
+/*    background-color: green;*/
+    margin: 0;
+    padding: 0;
+    font-size: clamp(1.2rem, 0.9333rem + 1.0667vw, 1.6rem);
+    text-align: center;
+
+}
+
+.reset_password {
+    background-color: #f6b6b6;
+}
+
+.reset_password label, ul {
+    display: none;
+}
+
+.reset_password input {
+    background-color: blueviolet;
+    margin: 5vh;
+}
+
 /* for medium devices */
 @media screen and (min-width: 576px) {
 
@@ -2874,7 +2986,7 @@ input::placeholder {
     }
 
     input {
-        height: 4v5;
+        height: 4vh;
     }
 
 }
