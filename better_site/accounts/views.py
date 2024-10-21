@@ -9,7 +9,8 @@ from .forms import CreateUserForm, UpdateProfileForm, PasswordChangeForm, Changi
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 import ast
-from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.views import PasswordChangeView, PasswordResetView
+
 
 def sign_up(request):
     global redirect_to
@@ -149,6 +150,9 @@ def change_password(request):
             if res_list[0] == 'Your old password was entered incorrectly. Please enter it again.':
                 res_list[0] = 'Старый пароль введен неправильно. Повторите еще раз.'
 
+            if res_list[0] == 'The password is too similar to the email address.':
+                res_list[0] = 'Пароль похож на почту'
+
             if res_list[0] == 'The two password fields didn’t match.':
                 res_list[0] = 'Пароли не совпадают. Повторите еще раз.'
 
@@ -173,5 +177,11 @@ def change_password(request):
 #     form_class = ChangingPasswordForm
 #     success_url = reverse_lazy('home')
 #     template_name = 'accounts/change_password.html'
+
+
+# def password_reset(PasswordResetView, request):
+#     if request.method == 'POST':
+
+
 
 

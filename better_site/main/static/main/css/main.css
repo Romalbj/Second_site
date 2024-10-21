@@ -2051,6 +2051,12 @@ input::placeholder {
     padding: 10vh 0 0 13vw;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(0, 0, 0, 0.4);
+/*    bottom: -20px;*/
+/*    position: relative;*/
+}
+
+.user_activity_container ul {
+    display: inline-block;
 }
 
 .user_activity_contents {
@@ -2230,7 +2236,7 @@ input::placeholder {
     padding: 0 30px;
     height: 2.5rem;
     left: 0;
-    font-size: 1.1rem;
+    font-size: clamp(0.8rem, 0.1rem + 1.6vw, 1.1rem);
 /*    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);*/
     margin: 0 0 2vh 0;
 }
@@ -2340,6 +2346,22 @@ input::placeholder {
     display: none;
 }
 
+.reset_password form .errorlist {
+    display: inline-block;
+/*    background-color: red;*/
+    bottom: -12vh;
+    left: 5vw;
+    position: absolute;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+
+/*.reset_password form .errorlist li {*/
+/*    background-color: greenyellow;*/
+/*}*/
+
 .reset_password form {
 /*    background-color: red;*/
     margin: 2vh 0 0 0;
@@ -2359,13 +2381,13 @@ input::placeholder {
     left: 0;
     font-size: 1.2rem;
 /*    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);*/
-    width: 35vw;
+    width: 40vw;
     border-radius: 30px;
     border: 1px solid  rgba(0, 0, 0, 0.05);
     padding: 0 30px;
     height: 2.5rem;
     left: 0;
-    font-size: 1.1rem;
+    font-size: clamp(0.6rem, 0.1rem + 1.6vw, 1.1rem);
 }
 
 
@@ -2400,8 +2422,8 @@ input::placeholder {
 
 .reset_password .eye-icon_1 {
     position: absolute;
-    top: 7.4vh;
-    right: 26vw;
+    top: 7vh;
+    right: 21.3vw;
     color: #ff007da6;
     font-size: 1.1rem;
     cursor: pointer;
@@ -2411,9 +2433,12 @@ input::placeholder {
 .reset_password .eye-icon_2 {
     position: absolute;
     top: 15vh;
-    right: 26vw;
+    right: 21.3vw;
     color: #ff007da6;
+    padding: 0 0 0 10px;
     font-size: 1.1rem;
+    background-color: #ffffff;
+    height: 25px;
 }
 
 /* for medium devices */
@@ -3131,6 +3156,63 @@ input::placeholder {
         height: 4vh;
     }
 
+    .form_email_to_password_reset {
+        margin: 1vh 0 0 3vw;
+    }
+
+    .password_reset_email h3 {
+        margin: 0 0 2vh 0;
+    }
+
+    .form_email_to_password_reset input {
+    /*    background-color: rgba(0, 0, 0, 0.05);*/
+        padding: 0 30px;
+        height: 2.2rem;
+        left: 0;
+        margin: 0 0 2vh 0;
+        width: 50vh;
+    }
+
+    .form_email_to_password_reset .submit_email {
+        background-color: #ff007d;
+        color: #fff;
+        padding: 2% 4%;
+        bottom: -50px;
+        width: 22vh;
+        font-size: 1.1rem;
+        height: 40px;
+    }
+
+    .reset_password input {
+    /*    background-color: #b8f3b3;*/
+        margin: 0vh 0 0 2vh;
+        left: 0;
+        padding: 0 15px;
+        height: 2.5rem;
+        left: 0;
+    }
+
+
+    .reset_password form button {
+        position: absolute;
+        left: 5vh;
+        bottom: -30px;
+        margin: 0;
+        background-color: #ff007d;
+        color: #fff;
+        padding: 2% 4%;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(1rem, 0.8rem + 0.8vw, 1.3rem);
+        border-radius: 40px;
+        transition: .3s;
+        border-color: transparent;
+        height: 50px;
+        border: 0px;
+    }
+
 }
 
 @media screen and (max-width: 580px) {
@@ -3154,6 +3236,10 @@ input::placeholder {
         line-height: 22px;
     }
 
+    .form_email_to_password_reset input {
+        width: 50vw;
+    }
+
 }
 
 @media screen and (max-width: 433px) {
@@ -3171,6 +3257,10 @@ input::placeholder {
     .list_articles ul li a {
         width: 58vw;
         height: 46vw;
+    }
+
+    .form_email_to_password_reset input {
+        width: 50vw;
     }
 
 }
