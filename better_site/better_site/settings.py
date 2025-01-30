@@ -76,21 +76,35 @@ WSGI_APPLICATION = 'better_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# SQLite DB
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
+##############################################################
+# PostgesDB
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'testdb',
+#         'USER': 'test',
+#         'PASSWORD': 'test password123',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+##############################################################
+# MySQL
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'testdb',
-        'USER': 'test',
-        'PASSWORD': 'test password123',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test',
+        'USER': 'root',
+        'PASSWORD': 'romalbj2306',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '3306',
     }
 }
 
